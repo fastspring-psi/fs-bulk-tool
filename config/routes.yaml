@@ -1,3 +1,23 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path:         /login.html
+    controller:   App\Controller\DefaultController::index
+
+    #Account endpoints
+login:
+    path: /login
+    controller: App\Controller\AccountController::login
+    methods: POST
+
+getAuthenticatedURL:
+    path: /getAuthenticatedURL
+    controller: App\Controller\AccountController::getAuthenticatedURL
+    methods: POST
+
+    #Templates
+
+loginPage:
+    path:         /login.html
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: login.html
+    methods: GET

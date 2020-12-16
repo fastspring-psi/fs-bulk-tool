@@ -12,7 +12,7 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="/styles/custom.css">
-    
+
   </head>
   <body>
     <div class="login-wrapper fadeInDown">
@@ -23,17 +23,60 @@
 
           <form class"form-signin" id="loginForm">
             <p> Please provide your API credentials to log in to your portal </p>
-            <input type="text" id="username" class="fadeIn second" name="login" placeholder="API Username">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="API Password">
+            <input type="text" id="inputUsername" class="fadeIn second" name="login" placeholder="API Username">
+            <input type="text" id="inputPassword" class="fadeIn third" name="login" placeholder="API Password">
             <input type="submit" class="fadeIn fourth" value="Log In">
+            <p class="mt-5 mb-3 text-muted text-center">&copy; FastSpring</p>
          </form>
 
          <div id="formFooter">
-           <a class="underlineHover" href="#">Where are my API credentials?</a>
+           <a class="underlineHover" href="https://fastspring.com/docs/fastspring-api/">Where are my API credentials?</a>
          </div>
        </div>
      </div>
 
+     <script type="text/javascript">
+
+        /*
+            Grab the form value and send it to the backend. If the request is succesfull a tokenized version of the
+            API credentials is stored in the sessionStorage and the user is sent to buyer's account page.
+        */
+        function submitPassword() {
+            const username = document.getElementById('inputUsername').value;
+            const password = document.getElementById('inputPassword').value;
+            const payload = { username, password };
+            //showLoginLoader();
+            $.post(`${window.location.origin}/login`, payload)
+                .done((resLogin) => {
+                    if (resLogin && resLogin.success) {
+                        const { token } = resLogin;
+                        // Store private token in local storage
+                        sessionStorage.setItem('FS-token', JSON.stringify(token));
+                        console.log(token);
+
+                        // Redirect to user portal
+                        //window.location.href = `/portal/${accountId}/overview.html`;
+                    } else {
+                        alert(resLogin.error);
+                    }
+                    //hideLoginLoader();
+                })
+                .fail(() => {
+                    alert('There was a problem with your request, please try again');
+                    //hideLoginLoader();
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prevent default behaviour when submitting password
+            $('#loginForm').submit(function (e) {
+                e.preventDefault();
+                submitPassword();
+                return false;
+            });
+        });
+
+     </script>
 
 
 
