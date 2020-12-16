@@ -54,3 +54,4 @@ class AccountController extends AbstractController
             return new JsonResponse(['success' => false, 'error' => $e->getMessage()]);
         }
     }
+}
