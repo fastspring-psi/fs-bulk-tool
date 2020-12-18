@@ -18,11 +18,11 @@ class Redirect404Listener
      */
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
+        console.log("REDIRECT WAS CALLED");
         // If not a HttpNotFoundException ignore
         if (!$event->getException() instanceof NotFoundHttpException) {
             return;
         }
-        console.log("REDIRECT WAS CALLED");
         // Create redirect response with url for the home page
         $response = new RedirectResponse('/login.html');
         // Set the response to be processed
