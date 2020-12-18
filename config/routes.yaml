@@ -1,6 +1,6 @@
-index:
-    path:         /login.html
-    controller:   App\Controller\DefaultController::index
+#index:
+#    path:         /login.html
+#    controller:   App\Controller\DefaultController::index
 
     #Account endpoints
 login:
