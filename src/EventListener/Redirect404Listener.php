@@ -15,7 +15,7 @@ class Redirect404Listener
      * @var GetResponseForExceptionEvent $event
      * @return null
      */
-    public function onKernelException(GetResponseForExceptionEvent $event)
+    public function onKernelException(ExceptionEvent $event)
     {
         console.log($event);
         // If not a HttpNotFoundException ignore
