@@ -11,7 +11,7 @@ use Symfony\Component\Routing\RouterInterface;
 
 class Redirect404Listener
 {
-    console.log("REDIRECT WAS CALLED");
+    echo '<script>console.log("REDIRECT WAS CALLED");</script>';
     /**
      * @var GetResponseForExceptionEvent $event
      * @return null
