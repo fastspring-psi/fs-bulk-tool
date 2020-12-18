@@ -11,14 +11,14 @@ use Symfony\Component\Routing\RouterInterface;
 
 class Redirect404Listener
 {
-
+    console.log("REDIRECT WAS CALLED");
     /**
      * @var GetResponseForExceptionEvent $event
      * @return null
      */
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
-        console.log("REDIRECT WAS CALLED");
+        //console.log("REDIRECT WAS CALLED");
         // If not a HttpNotFoundException ignore
         if (!$event->getException() instanceof NotFoundHttpException) {
             return;
