@@ -1,9 +1,9 @@
-index:
-    path:         /index.php
-    controller:   App\Controller\FrameworkBundle\TemplateController
-    defaults:
-        template: login.html
-    methods: GET
+#index:
+#    path:         /index.php
+#    controller:   App\Controller\FrameworkBundle\TemplateController
+#    defaults:
+#        template: login.html
+#    methods: GET
 
     #Account endpoints
 login:

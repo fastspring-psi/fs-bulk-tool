@@ -17,7 +17,7 @@ class Redirect404Listener
      */
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
-        //console.log("REDIRECT WAS CALLED");
+        console.log($event);
         // If not a HttpNotFoundException ignore
         if (!$event->getException() instanceof NotFoundHttpException) {
             return;
