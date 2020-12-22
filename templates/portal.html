@@ -6,7 +6,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Custom styles -->
@@ -17,37 +17,42 @@
   </head>
 
   <body>
-        This is the portal page.
+    <nav class="navbar navbar-dark bg-dark">
+        <button id="fs-logout" data-toggle="tooltip" data-placement="bottom" title="Logout" data-original-title="Logout" class="navbar-toggler" type="button" onclick="logout()">
+            <i class="fa fa-sign-out customBlue" style="cursor:pointer">
+            </i>
+        </button>
+    </nav>
 
 
 
 
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-                //$('#loading-spinner').show();
-                // Get account details and render it
-                const token = getToken();
-                $.post(`${window.location.origin}/getPortalDetails`, { token })
-                    .done((resPortal) => {
-                        if (resPortal && resPortal.success) {
-                            /*const accountElement = renderAccountDetails(resAccount.account);
-                            const ordersElement = resAccount.orders.length > 0 ?
-                                renderOrdersTable(resAccount.orders)
-                                :
-                                renderNoOrders(resAccount.orders);
-                            ;
-                            $('#loading-spinner').hide();
-                            $('#account-container').append([accountElement, ordersElement]);*/
-                            console.log(resPortal.products);
-                        } else {
-                            forceLogout(resAccount.error);
-                        }
-                    })
-                    .fail(() => {
-                        forceLogout('An unexpected server error occurred, please login again.');
-                    });
-            });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            //$('#loading-spinner').show();
+            // Get account details and render it
+            const token = getToken();
+            $.post(`${window.location.origin}/getPortalDetails`, { token })
+                .done((resPortal) => {
+                    if (resPortal && resPortal.success) {
+                        /*const accountElement = renderAccountDetails(resAccount.account);
+                        const ordersElement = resAccount.orders.length > 0 ?
+                            renderOrdersTable(resAccount.orders)
+                            :
+                            renderNoOrders(resAccount.orders);
+                        ;
+                        $('#loading-spinner').hide();
+                        $('#account-container').append([accountElement, ordersElement]);*/
+                        console.log(resPortal.products);
+                    } else {
+                        forceLogout(resAccount.error);
+                    }
+                })
+                .fail(() => {
+                    forceLogout('An unexpected server error occurred, please login again.');
+                });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   </body>
 </html>
