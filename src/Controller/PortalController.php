@@ -69,7 +69,7 @@ class PortalController extends AbstractController
         $products = [];
         if (count($result['products']) > 0) {
           $productPaths = join(',', $result['products']);
-          $products = $fsApi->('products/'.$productPaths)['products'];
+          $products = $fsApi->get('products/'.$productPaths)['products'];
         }
 
         return new JsonResponse([
