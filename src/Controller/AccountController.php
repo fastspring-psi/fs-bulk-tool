@@ -44,12 +44,14 @@ class AccountController extends AbstractController
                   'error' => $products['error']
               ]);
             }
-
+            // Dumby portal ID
+            // TO DO: Store unique portal ID to prevent duplicates
+            $portalId = uniqid();
             // Create token
             $cryptor = new Cryptor();
             $token = $cryptor->encrypt($username.":".$password);
             // Return credentials in encrypted token
-            return new JsonResponse(['success' => true, 'token' => $token]);
+            return new JsonResponse(['success' => true, 'token' => $token, 'portalId' => $portalId]);
         } catch (Exception $e) {
             return new JsonResponse(['success' => false, 'error' => $e->getMessage()]);
         }
