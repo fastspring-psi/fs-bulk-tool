@@ -11,6 +11,11 @@ login:
     controller: App\Controller\PortalController::login
     methods: POST
 
+getPortalDetails:
+    path: /getPortalDetails
+    controller: App\Controller\PortalController::getPortalDetails
+    methods: POST
+    
     #Templates
 
 loginPage:

@@ -15,5 +15,35 @@
 
   <body>
         This is the portal page.
+
+
+
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                //$('#loading-spinner').show();
+                // Get account details and render it
+                const token = getToken();
+                $.post(`${window.location.origin}/getPortalDetails`, { token })
+                    .done((resPortal) => {
+                        if (resPortal && resPortal.success) {
+                            /*const accountElement = renderAccountDetails(resAccount.account);
+                            const ordersElement = resAccount.orders.length > 0 ?
+                                renderOrdersTable(resAccount.orders)
+                                :
+                                renderNoOrders(resAccount.orders);
+                            ;
+                            $('#loading-spinner').hide();
+                            $('#account-container').append([accountElement, ordersElement]);*/
+                            console.log(resPortal.products);
+                        } else {
+                            forceLogout(resAccount.error);
+                        }
+                    })
+                    .fail(() => {
+                        forceLogout('An unexpected server error occurred, please login again.');
+                    });
+            });
+        </script>
   </body>
 </html>

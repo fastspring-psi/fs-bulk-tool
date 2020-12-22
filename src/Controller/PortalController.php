@@ -56,4 +56,28 @@ class PortalController extends AbstractController
             return new JsonResponse(['success' => false, 'error' => $e->getMessage()]);
         }
     }
+
+    public function getPortalDetails(Request $request){
+      try {
+        // Check credentials from URL
+        $credentials = AuthRequest::getCredentials($request);
+
+        // Get product information from API
+        $fsApi = new FSApi($credentials);
+        $result = $fsApi->get('products/');
+
+        $products = [];
+        if (count($result['products']) > 0) {
+          $productPaths = join(',', $result['products']);
+          $products = $fsApi->('products/'.$productPaths)['products'];
+        }
+
+        return new JsonResponse([
+          'success' => true,
+          'products' => $products
+        ]);
+      } catch (Exception $e) {
+        return new JsonResponse(['success' => false, 'error' => $e->getMessage()]);
+      }
+    }
 }
