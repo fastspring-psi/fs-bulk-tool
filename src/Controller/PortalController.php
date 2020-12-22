@@ -15,7 +15,7 @@ use App\Utils\AuthRequest;
 /*
  *  Controller class for the /accounts endpoint
  */
-class AccountController extends AbstractController
+class PortalController extends AbstractController
 {
     public function login(Request $request) {
         try {

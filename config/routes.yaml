@@ -5,15 +5,10 @@
 #        template: login.html
 #    methods: GET
 
-    #Account endpoints
+    #Portal endpoints
 login:
     path: /login
-    controller: App\Controller\AccountController::login
-    methods: POST
-
-getAuthenticatedURL:
-    path: /getAuthenticatedURL
-    controller: App\Controller\AccountController::getAuthenticatedURL
+    controller: App\Controller\PortalController::login
     methods: POST
 
     #Templates
