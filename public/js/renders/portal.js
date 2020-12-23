@@ -21,12 +21,10 @@ function renderNoProducts() {
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
-  console.log(product.pricing.price);
-  console.log(product.pricing.price.USD);
   `
         <tr class='product-row'>
             <td> ${product.display.en} </td>
-            <td> ${product.pricing.price.USD} </td>
+            <td> ${product.pricing.price[0]} </td>
         </tr>
   `);
 
