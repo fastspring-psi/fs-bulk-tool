@@ -25,7 +25,7 @@ function renderProductsTable(products) {
         <tr class='product-row'>
             <td> ${product.display.en} </td>
             <td> ${product.pricing.price.USD} </td>
-            <td> ${product.hasOwnProperty("price")} </td>
+            <td> ${product.pricing.hasOwnProperty("price")} </td>
         </tr>
   `);
 
