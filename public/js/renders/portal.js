@@ -28,7 +28,7 @@ function renderProductsTable(products) {
             <td> ${product.pricing.quantityDiscounts || ''} </td>
         </tr>
   `
-  console.log(product.pricing.quantityDiscounts);
+  console.log(product.pricing.quantityDiscounts)
 );
 
   return (`
