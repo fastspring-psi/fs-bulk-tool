@@ -28,7 +28,16 @@
       </button>
     </nav>
 
-
+    <div class="container-color d-flex w-100 h-100 mx-auto flex-column">
+        <main role="main" class="container">
+            <div id="loading-spinner" class="spinner-border pageLoader" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div id='products-container' class='card container'>
+                <!-- Content will be populated here -->
+            </div>
+        </main>
+    </div>
 
 
     <script type="text/javascript">
@@ -39,17 +48,15 @@
             $.post(`${window.location.origin}/getPortalDetails`, { token })
                 .done((resPortal) => {
                     if (resPortal && resPortal.success) {
-                        /*const accountElement = renderAccountDetails(resAccount.account);
-                        const ordersElement = resAccount.orders.length > 0 ?
-                            renderOrdersTable(resAccount.orders)
+                        const productsElement = resPortal.products.length > 0 ?
+                            renderProductsTable(resPortal.products)
                             :
-                            renderNoOrders(resAccount.orders);
+                            renderNoProducts(resPortal.products);
                         ;
-                        $('#loading-spinner').hide();
-                        $('#account-container').append([accountElement, ordersElement]);*/
+                        $('#products-container').append([productsElement]);
                         console.log(resPortal.products);
                     } else {
-                        forceLogout(resAccount.error);
+                        forceLogout(resPortal.error);
                     }
                 })
                 .fail(() => {
