@@ -25,9 +25,11 @@ function renderProductsTable(products) {
         <tr class='product-row'>
             <td> ${product.display.en} </td>
             <td> ${product.pricing.price.USD} </td>
-            <td> ${product.pricing.quantityDiscounts["1"] || ''} </td>
+            <td> ${product.pricing.quantityDiscounts || ''} </td>
         </tr>
-  `);
+  `
+  console.log(product.pricing.quantityDiscounts);
+);
 
   return (`
       <div id="products-table-container" class="row">
