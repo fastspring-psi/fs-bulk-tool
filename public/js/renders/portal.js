@@ -23,6 +23,7 @@ function renderProductsTable(products) {
   const productRows = products.map((product) => `
         <tr class='product-row'>
             <td> ${product.display.en} </td>
+            <td> ${product.pricing.price} </td>
         </tr>
   `);
 
