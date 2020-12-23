@@ -23,7 +23,7 @@ function renderProductsTable(products) {
   const productRows = products.map((product) => `
         <tr class='product-row'>
             <td> ${product.display.en} </td>
-            <td> ${product.pricing.price.USD} </td>
+            <td> ${(USD in product.pricing.price) ? 'True' : 'False'} </td>
         </tr>
   `);
 

@@ -49,13 +49,13 @@
             $.post(`${window.location.origin}/getPortalDetails`, { token })
                 .done((resPortal) => {
                     if (resPortal && resPortal.success) {
+                        console.log(resPortal.products);
                         const productsElement = resPortal.products.length > 0 ?
                             renderProductsTable(resPortal.products)
                             :
                             renderNoProducts(resPortal.products);
                         ;
                         $('#products-container').append([productsElement]);
-                        console.log(resPortal.products);
                     } else {
                         forceLogout(resPortal.error);
                     }
