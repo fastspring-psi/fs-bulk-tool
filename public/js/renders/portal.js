@@ -24,7 +24,7 @@ function renderProductsTable(products) {
   `
         <tr class='product-row'>
             <td> ${product.display.en} </td>
-            <td> ${typeof(product.pricing.price)} </td>
+            <td> ${product.pricing.price.USD} </td>
         </tr>
   `);
 
