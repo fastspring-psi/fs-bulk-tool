@@ -20,9 +20,9 @@ function renderProductsTable(products) {
         <tr class='product-row'>
             <td> ${product.display.en} </td>
             <td> ${product.pricing.price.USD} </td>
-            <td> ${product.pricing.quantityDiscounts || ''} </td>
-            <td> ${product.pricing.dateLimits.start || ''} </td>
-            <td> ${product.pricing.dateLimits.end || ''} </td>
+            <td> ${(product.pricing.quantityDiscounts in products) ?  product.pricing.quantityDiscounts : ''} </td>
+            <td> ${(product.pricing.dateLimits.start in products) ? product.pricing.dateLimits.start : ''} </td>
+            <td> ${(product.pricing.dateLimits.end in products) ? product.pricing.dateLimits.end : ''} </td>
         </tr>
   `);
 
