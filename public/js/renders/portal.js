@@ -21,8 +21,8 @@ function renderProductsTable(products) {
             <td> ${product.display.en} </td>
             <td> ${product.pricing.price.USD} </td>
             <td> ${product.pricing.quantityDiscounts || ''} </td>
-            <td> ${product.dateLimits.start || ''} </td>
-            <td> ${product.dateLimits.end || ''} </td>
+            <td> ${product.pricing.dateLimits.start || ''} </td>
+            <td> ${product.pricing.dateLimits.end || ''} </td>
         </tr>
   `);
 
