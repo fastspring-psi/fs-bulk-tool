@@ -16,7 +16,7 @@ function renderNoProducts() {
 //Decide what information to show --> what is the best way to display product information and allow for quick editing?
 //
 function renderProductsTable(products) {
-  const productRows = product.map((product) => `
+  const productRows = products.map((product) => `
         <tr class='product-row'>
             <td> ${product.display.en} </td>
             <td> ${porduct.pricing.price.USD} </td>
