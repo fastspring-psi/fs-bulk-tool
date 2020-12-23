@@ -15,14 +15,14 @@ function renderNoProducts() {
 //Add logic to display discounts in a readable way
 //Decide what information to show --> what is the best way to display product information and allow for quick editing?
 //
+/*            <td> ${product.pricing.price.USD} </td>
+            <td> ${(product.hasOwnProperty('quantityDiscounts')) ?  product.pricing.quantityDiscounts : ''} </td>
+            <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
+            <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
 function renderProductsTable(products) {
   const productRows = products.map((product) => `
         <tr class='product-row'>
             <td> ${product.display.en} </td>
-            <td> ${product.pricing.price.USD} </td>
-            <td> ${(product.hasOwnProperty('quantityDiscounts')) ?  product.pricing.quantityDiscounts : ''} </td>
-            <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
-            <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>
         </tr>
   `);
 
