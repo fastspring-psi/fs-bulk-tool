@@ -60,6 +60,7 @@ function renderProductsTable(products) {
       <td> ${product.pricing.price.USD} </td>
       <td> ${renderProductDiscounts(product)} </td>
       <td> ${renderProductDiscountDateLimits(product)} </td>
+      <td> ${product.pricing.discountReason.en || ''} </td>
   </tr>
   `
 );
@@ -73,8 +74,8 @@ function renderProductsTable(products) {
                 <th scope="col"> Display Name </th>
                 <th scope="col"> Price </th>
                 <th scope="col"> Discount </th>
-                <th scope="col"> Discount Start </th>
-                <th scope="col"> Discount End </th>
+                <th scope="col"> Discount Date Limits </th>
+                <th scope="col"> Discount Description </th>
               </tr>
             </thead>
             <tbody>
