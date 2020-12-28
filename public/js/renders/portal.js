@@ -24,7 +24,7 @@ function renderDiscounts(product) {
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
     discounts = Object.keys(product.pricing.quantityDiscounts).map((key) => (
       `<span> ${key} : ${product.pricing.quantityDiscounts[key]} </span>`
-    )).join(');')
+    )).join('');
   }
   return(discounts);
 }
