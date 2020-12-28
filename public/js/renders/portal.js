@@ -39,8 +39,6 @@ function renderProductsTable(products) {
             <td> ${product.display.en} </td>
             <td> ${product.pricing.price.USD} </td>
             <td> TEST </td>
-            <td> ${JSON.stringify(product.pricing.dateLimits) || ''} </td>
-            <td> ${JSON.stringify(product.pricing.dateLimits) || ''} </td>
         </tr>
   `
 );
