@@ -43,7 +43,11 @@ function renderDiscounts(product) {
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `
-  TEST
+  <tr class='product-row'>
+      <td> ${product.display.en} </td>
+      <td> ${product.pricing.price.USD} </td>
+      <td> TEST </td>
+  </tr>
   `
 );
 
