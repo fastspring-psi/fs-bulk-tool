@@ -31,15 +31,18 @@ function renderDiscounts(product) {
   return(discounts);
 }
 
+/*
+<tr class='product-row'>
+    <td> ${product.display.en} </td>
+    <td> ${product.pricing.price.USD} </td>
+    <td> TEST </td>
+</tr>
+*/
+
 
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `
-        <tr class='product-row'>
-            <td> ${product.display.en} </td>
-            <td> ${product.pricing.price.USD} </td>
-            <td> TEST </td>
-        </tr>
   `
 );
 
