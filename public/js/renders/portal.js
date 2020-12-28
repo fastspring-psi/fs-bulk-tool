@@ -20,6 +20,7 @@ function renderNoProducts() {
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
 function renderProductsTable(products) {
+  console.log("TEST");
   console.log([1].pricing.quantityDiscounts);
   const productRows = products.map((product) =>
   `
