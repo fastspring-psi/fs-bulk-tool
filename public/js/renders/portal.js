@@ -19,16 +19,28 @@ function renderNoProducts() {
             <td> ${(product.hasOwnProperty('quantityDiscounts')) ?  product.pricing.quantityDiscounts : ''} </td>
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
-function renderDiscounts(product) {
-  debugger;
-  console.log("rednerDiscounts was called");
+function renderProductDiscounts(product) {
   let discounts = '';
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
     discounts = Object.keys(product.pricing.quantityDiscounts).map((key) => (
       `<span> ${key} : ${product.pricing.quantityDiscounts[key]} </span>`
     )).join('');
+  } else {
+    discounts = "No discounts";
   }
   return(discounts);
+}
+
+function renderProductDiscountDateLimits(product) {
+  let dateLimits = '';
+  if (product.pricing.dateLimits && Object.keys(product.pricing.dateLimits).length > 0) {
+    dateLimits = Object.keys(product.pricing.dateLimits).map((key) => (
+      `<span> ${key} : ${product.pricing.dateLimits[key]} </span>`
+    )).join('');
+  } else {
+    dateLimits = "No date limits";
+  }
+  return(dateLimits);
 }
 
 /*
@@ -46,7 +58,8 @@ function renderProductsTable(products) {
   <tr class='product-row'>
       <td> ${product.display.en} </td>
       <td> ${product.pricing.price.USD} </td>
-      <td> ${renderDiscounts(product)} </td>
+      <td> ${renderProductDiscounts(product)} </td>
+      <td> ${renderProductDiscountDateLimits(product)} </td>
   </tr>
   `
 );
