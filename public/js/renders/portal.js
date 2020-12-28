@@ -43,6 +43,7 @@ function renderDiscounts(product) {
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `
+  TEST
   `
 );
 
