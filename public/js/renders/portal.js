@@ -8,7 +8,6 @@ function renderNoProducts() {
   `);
 }
 
-
 //TO DO:
 //Handle multiple prices
 //Need to check if there are discounts or not
@@ -43,43 +42,34 @@ function renderProductDiscountDateLimits(product) {
   return(dateLimits);
 }
 
-/*function renderProductDiscountReason(product) {
-  let discountReasonEn = '';
-  if (product.pricing.discountReason && Object.keys(product.pricing.discountReason).length > 0) {
-    if (product.pricing.discountReason["en"])
-  }
-}*/
-
-
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `
   <tr class='product-row'>
-      <td> ${product.display.en} </td>
-      <td> ${product.pricing.price.USD} </td>
-      <td> ${renderProductDiscounts(product)} </td>
-      <td> ${renderProductDiscountDateLimits(product)} </td>
-      <td> ${product.pricing.discountReason ? "test" : 'Fail'} </td>
+    <td> ${product.display.en} </td>
+    <td> ${product.product} </td>
+    <td> ${product.pricing.price.USD} </td>
+    <td> ${renderProductDiscounts(product)} </td>
+    <td> ${renderProductDiscountDateLimits(product)} </td>
   </tr>
   `
-);
-
+  );
   return (`
-      <div id="products-table-container" class="row">
-        <div class='col'>
-          <table class="table table-hover">
-            <thead>
-              <tr class="bg-info">
-                <th scope="col"> Display Name </th>
-                <th scope="col"> Price </th>
-                <th scope="col"> Discount </th>
-                <th scope="col"> Discount Date Limits </th>
-                <th scope="col"> Discount Description </th>
-              </tr>
-            </thead>
-            <tbody>
-              ${productRows.join('')}
-            </tbody>
+    <div id="products-table-container" class="row">
+      <div class='col'>
+        <table class="table table-hover">
+          <thead>
+            <tr class="bg-info">
+              <th scope="col"> Display Name </th>
+              <th scope="col"> Path </th>
+              <th scope="col"> Price </th>
+              <th scope="col"> Discount </th>
+              <th scope="col"> Discount Date Limits </th>
+            </tr>
+          </thead>
+          ${productRows.join('')}
+          <tbody>
+          </tbody>
           </table>
         </div>
       </div>
