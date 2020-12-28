@@ -43,13 +43,12 @@ function renderProductDiscountDateLimits(product) {
   return(dateLimits);
 }
 
-/*
-<tr class='product-row'>
-    <td> ${product.display.en} </td>
-    <td> ${product.pricing.price.USD} </td>
-    <td> TEST </td>
-</tr>
-*/
+/*function renderProductDiscountReason(product) {
+  let discountReasonEn = '';
+  if (product.pricing.discountReason && Object.keys(product.pricing.discountReason).length > 0) {
+    if (product.pricing.discountReason["en"])
+  }
+}*/
 
 
 function renderProductsTable(products) {
@@ -60,7 +59,7 @@ function renderProductsTable(products) {
       <td> ${product.pricing.price.USD} </td>
       <td> ${renderProductDiscounts(product)} </td>
       <td> ${renderProductDiscountDateLimits(product)} </td>
-      <td> ${product.pricing.discountReason ? product.pricing.discountReason.en : ''} </td>
+      <td> ${product.pricing.discountReason ? "test" : 'Fail'} </td>
   </tr>
   `
 );
