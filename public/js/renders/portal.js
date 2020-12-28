@@ -26,7 +26,7 @@ function renderDiscounts(product) {
       `<span> ${key} : ${product.pricing.quantityDiscounts[key]} </span>`
     )).join(');')
   }
-  return(tags);
+  return(discounts);
 }
 
 
