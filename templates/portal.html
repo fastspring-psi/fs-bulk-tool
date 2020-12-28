@@ -50,7 +50,7 @@
                 .done((resPortal) => {
                     if (resPortal && resPortal.success) {
                         console.log(resPortal.products);
-                        console.log(resPortal.products.[1].pricing.quantityDiscounts)
+                        console.log(resPortal.products.1.pricing.quantityDiscounts)
                         const productsElement = resPortal.products.length > 0 ?
                             renderProductsTable(resPortal.products)
                             :
