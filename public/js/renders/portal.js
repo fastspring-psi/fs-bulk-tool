@@ -8,21 +8,18 @@ function renderNoProducts() {
   `);
 }
 
-//TO DO:
-//Handle multiple prices
-//Need to check if there are discounts or not
-//Add logic to display discounts in a readable way
-//Decide what information to show --> what is the best way to display product information and allow for quick editing?
-//
 /*            <td> ${product.pricing.price.USD} </td>
             <td> ${(product.hasOwnProperty('quantityDiscounts')) ?  product.pricing.quantityDiscounts : ''} </td>
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
+
+//TODO:
+//Display %off with commas
 function renderProductDiscounts(product) {
   let discounts = '';
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
     discounts = Object.keys(product.pricing.quantityDiscounts).map((key) => (
-      `<span> ${key} : ${product.pricing.quantityDiscounts[key]} </span>`
+      `<span> ${product.pricing.quantityDiscounts[key]}% off ${key} </span>`
     )).join('');
   } else {
     discounts = "No discounts";
@@ -30,6 +27,8 @@ function renderProductDiscounts(product) {
   return(discounts);
 }
 
+//TODO:
+//Display date range in a more readable way
 function renderProductDiscountDateLimits(product) {
   let dateLimits = '';
   if (product.pricing.dateLimits && Object.keys(product.pricing.dateLimits).length > 0) {
@@ -42,13 +41,20 @@ function renderProductDiscountDateLimits(product) {
   return(dateLimits);
 }
 
+
+//TO DO:
+//Handle multiple prices
+//Need to check if there are discounts or not
+//Add logic to display discounts in a readable way
+//Decide what information to show --> what is the best way to display product information and allow for quick editing?
+//
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `
   <tr class='product-row'>
     <td> ${product.display.en} </td>
     <td> ${product.product} </td>
-    <td> ${product.pricing.price.USD} </td>
+    <td> $${product.pricing.price.USD} </td>
     <td> ${renderProductDiscounts(product)} </td>
     <td> ${renderProductDiscountDateLimits(product)} </td>
   </tr>
