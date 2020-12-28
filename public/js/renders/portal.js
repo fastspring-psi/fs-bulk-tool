@@ -20,6 +20,7 @@ function renderNoProducts() {
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
             <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
 function renderDiscounts(product) {
+  debugger;
   console.log("rednerDiscounts was called");
   let discounts = '';
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
