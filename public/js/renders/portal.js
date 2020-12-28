@@ -36,7 +36,7 @@ function renderProductsTable(products) {
         <tr class='product-row'>
             <td> ${product.display.en} </td>
             <td> ${product.pricing.price.USD} </td>
-            <td> ${!product.pricing.quantityDiscounts || renderDiscounts(product)} </td>
+            <td> ${renderDiscounts(product)} </td>
             <td> ${JSON.stringify(product.pricing.dateLimits) || ''} </td>
             <td> ${JSON.stringify(product.pricing.dateLimits) || ''} </td>
         </tr>
