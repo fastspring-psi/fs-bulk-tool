@@ -49,7 +49,7 @@
             $.post(`${window.location.origin}/getPortalDetails`, { token })
                 .done((resPortal) => {
                     if (resPortal && resPortal.success) {
-                        console.log(resPortal.products);
+                        //console.log(resPortal.products);
                         const productsElement = resPortal.products.length > 0 ?
                             renderProductsTable(resPortal.products)
                             :
