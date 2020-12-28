@@ -60,7 +60,7 @@ function renderProductsTable(products) {
       <td> ${product.pricing.price.USD} </td>
       <td> ${renderProductDiscounts(product)} </td>
       <td> ${renderProductDiscountDateLimits(product)} </td>
-      <td> ${product.pricing.discountReason || ''} </td>
+      <td> ${product.pricing.discountReason ? product.pricing.discountReason.en : ''} </td>
   </tr>
   `
 );
