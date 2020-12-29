@@ -271,9 +271,14 @@ input[type=text]:placeholder {
 
 #discount-amount-group {
   display: inline-flex;
-  width: 25%;
+  width: 30%;
 }
 
 #discount-date-range-group {
-  width:100%;
+  display: inline-flex;
+  width: 100%;
+}
+
+#discount-date-range-group .form-control {
+  width: auto;
 }
