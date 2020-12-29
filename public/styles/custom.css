@@ -260,3 +260,11 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+.card {
+  padding: 35px;
+}
+
+#form-container {
+  background-color: #808080;
+}
