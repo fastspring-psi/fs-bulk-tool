@@ -95,13 +95,12 @@
                         console.log(resPortal.products);
                         //debugger;
                         //Call intial form not products table
-                        renderUpdateForm();
-                        /*const productsElement = resPortal.products.length > 0 ?
+                        const productsElement = resPortal.products.length > 0 ?
                             renderProductsTable(resPortal.products)
                             :
                             renderNoProducts(resPortal.products);
                         ;
-                        $('#products-container').append([productsElement]);*/
+                        $('#products-container').append([productsElement]);
                     } else {
                         forceLogout(resPortal.error);
                     }
