@@ -268,3 +268,12 @@ input[type=text]:placeholder {
 #form-container {
   margin-top: 30px;
 }
+
+#discount-amount-group {
+  display: inline-flex;
+  width: 25%;
+}
+
+#discount-date-range-group {
+  width:100%;
+}
