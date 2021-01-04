@@ -106,6 +106,13 @@
                             renderNoProducts(resPortal.products);
                         ;
                         $('#products-container').append([productsElement]);
+
+                        $('.table tr.product-row').click(function(event){
+                          console.log("table row clicked");
+                          if (event.target.type !== 'checkbox') {
+                            $(':checkbox', this).trigger('click');
+                          }
+                        });
                     } else {
                         forceLogout(resPortal.error);
                     }

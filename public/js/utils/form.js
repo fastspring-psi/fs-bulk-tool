@@ -9,13 +9,6 @@ $(document).ready(function(){
     autoclose: true,
   };
   date_input.datepicker(options);
-
-  $('.table tr.product-row').click(function(event){
-    console.log("table row clicked");
-    if (event.target.type !== 'checkbox') {
-      $(':checkbox', this).trigger('click');
-    }
-  });
 });
 
 function testPrint() {
