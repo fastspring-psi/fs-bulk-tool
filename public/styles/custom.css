@@ -1,8 +1,8 @@
 
 /* BASIC */
-
-html {
-  background-color: #56baed;
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -27,7 +27,9 @@ h2 {
   color: #cccccc;
 }
 
-
+textarea {
+  resize: true;
+}
 
 /* STRUCTURE */
 
@@ -281,8 +283,4 @@ input[type=text]:placeholder {
 
 #discount-date-range-group .form-control {
   width: auto;
-}
-
-textarea {
-  resize: true;
 }
