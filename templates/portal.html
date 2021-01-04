@@ -62,14 +62,14 @@
 
                         //TODO:
                         //Call intial form not products table
-                        const formElement = renderDiscountForm();
                         const productsElement = resPortal.products.length > 0 ?
-                            (renderProductsTable(resPortal.products), $('#form-container').append(formElement), $('#products-container').append([productsElement]))
+                            renderProductsTable(resPortal.products)
                             :
-                            (renderNoProducts(resPortal.products), $('#products-container').append([productsElement]));
+                            renderNoProducts(resPortal.products);
                         ;
-                        //$('#products-container').append([productsElement]);
-                        //$('#form-container').append(formElement);
+                        const formElement = renderDiscountForm();
+                        $('#products-container').append([productsElement]);
+                        $('#form-container').append(formElement);
 
                         //used for table row selecting
                         $('.table tr.product-row').click(function(event){
