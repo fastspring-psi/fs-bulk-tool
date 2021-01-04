@@ -282,3 +282,7 @@ input[type=text]:placeholder {
 #discount-date-range-group .form-control {
   width: auto;
 }
+
+textarea {
+  resize: true;
+}
