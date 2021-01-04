@@ -11,9 +11,26 @@ $(document).ready(function(){
   date_input.datepicker(options);
 });
 
-$('#discount-form-submit').click(function() {
-  console.log('test');
-});
+//TODO
+//Make submit function independent of page ie accept arguments
+function selectedDiscountSubmit() {
+  var percent = document.getElementById("pcntOff").value;
+  var prodQty = document.getElementById("prodQty").value;
+  var dateStart = document.getElementById("dateStart").value;
+  var dateEnd = document.getElementById("dateEnd").value;
+  var discReason = document.getElementById("discReason").value;
+
+  var productsTable = document.getElementById("table-products");
+
+  var checkBoxes = productsTable.getElementsByTagName("INPUT");
+
+  for(var i = 0; i < selectedProducts.length; i++){
+    if(checkBoxes[i].checked){
+      console.log(i);
+    }
+  }
+}
+
 function testPrint() {
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
@@ -64,7 +81,7 @@ function renderDiscountForm() {
       </div>
       <div class="form-group">
         <div>
-          <button class="btn btn-primary " id="discount-form-submit" name="submit" type="submit">
+          <button class="btn btn-primary " id="discount-form-submit" name="submit" type="submit" onclick="testPrint()">
             Submit
           </button>
         </div>

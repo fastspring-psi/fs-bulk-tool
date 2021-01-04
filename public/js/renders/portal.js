@@ -63,7 +63,7 @@ function renderProductsTable(products) {
   return (`
     <div id="products-table-container" class="row">
       <div class='col'>
-        <table class="table table-hover">
+        <table class="table table-hover" id="table-products">
           <thead>
             <tr class="bg-info">
               <th scope="col"> Selected </th>
