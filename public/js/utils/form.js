@@ -14,6 +14,7 @@ $(document).ready(function(){
 //TODO
 //Make submit function independent of page ie accept arguments
 function selectedDiscountSubmit() {
+  debugger;
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
   var dateStart = document.getElementById("dateStart").value;
