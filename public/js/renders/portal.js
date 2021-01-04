@@ -52,6 +52,7 @@ function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `
   <tr class='product-row'>
+    <td> <input type="checkbox" /> </td>
     <td> ${product.display.en} </td>
     <td> ${product.product} </td>
     <td> $${product.pricing.price.USD} </td>
@@ -66,6 +67,7 @@ function renderProductsTable(products) {
         <table class="table table-hover">
           <thead>
             <tr class="bg-info">
+              <th scope="col"> Selected </th>
               <th scope="col"> Display Name </th>
               <th scope="col"> Path </th>
               <th scope="col"> Price </th>
