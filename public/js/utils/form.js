@@ -11,6 +11,9 @@ $(document).ready(function(){
   date_input.datepicker(options);
 });
 
+$('#discount-form-submit').click(function() {
+  system.log('test');
+});
 function testPrint() {
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
@@ -61,7 +64,7 @@ function renderDiscountForm() {
       </div>
       <div class="form-group">
         <div>
-          <button class="btn btn-primary " name="submit" type="submit" onclick="testPrint()">
+          <button class="btn btn-primary " id="discount-form-submit" name="submit" type="submit">
             Submit
           </button>
         </div>
