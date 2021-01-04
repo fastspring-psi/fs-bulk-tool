@@ -9,7 +9,13 @@ $(document).ready(function(){
     autoclose: true,
   };
   date_input.datepicker(options);
-})
+
+  $('.table tr').click(function(event)){
+    if (event.target.type !== 'checkbox') {
+      $(':checkbox', this).trigger('click');
+    }
+  });
+});
 
 function testPrint() {
   var percent = document.getElementById("pcntOff").value;
