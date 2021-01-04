@@ -64,11 +64,11 @@
                         //Call intial form not products table
                         const formElement = renderDiscountForm();
                         const productsElement = resPortal.products.length > 0 ?
-                            (renderProductsTable(resPortal.products), $('#form-container').append(formElement))
+                            (renderProductsTable(resPortal.products), $('#form-container').append(formElement), $('#products-container').append([productsElement]))
                             :
-                            renderNoProducts(resPortal.products);
+                            (renderNoProducts(resPortal.products), $('#products-container').append([productsElement]));
                         ;
-                        $('#products-container').append([productsElement]);
+                        //$('#products-container').append([productsElement]);
                         //$('#form-container').append(formElement);
 
                         //used for table row selecting
