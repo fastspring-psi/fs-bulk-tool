@@ -25,7 +25,7 @@ function selectedDiscountSubmit() {
 
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
 
-  for(var i = 0; i < selectedProducts.length; i++){
+  for(var i = 0; i < checkBoxes.length; i++){
     if(checkBoxes[i].checked){
       console.log(i);
     }
