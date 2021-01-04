@@ -10,7 +10,7 @@ $(document).ready(function(){
   };
   date_input.datepicker(options);
 
-  $('.table tr').click(function(event)){
+  $('.table tr').click(function(event){
     if (event.target.type !== 'checkbox') {
       $(':checkbox', this).trigger('click');
     }
