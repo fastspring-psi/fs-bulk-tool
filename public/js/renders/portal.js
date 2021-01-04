@@ -53,8 +53,7 @@ function renderProductsTable(products) {
   `
   <tr class='product-row'>
     <td> <input type="checkbox" /> </td>
-    <td> ${product.display.en} </td>
-    <td> ${product.product} </td>
+    <td data-path="${product.product}"> ${product.display.en} </td>
     <td> $${product.pricing.price.USD} </td>
     <td> ${renderProductDiscounts(product)} </td>
     <td> ${renderProductDiscountDateLimits(product)} </td>
@@ -69,7 +68,6 @@ function renderProductsTable(products) {
             <tr class="bg-info">
               <th scope="col"> Selected </th>
               <th scope="col"> Display Name </th>
-              <th scope="col"> Path </th>
               <th scope="col"> Price </th>
               <th scope="col"> Discount </th>
               <th scope="col"> Discount Date Limits </th>
