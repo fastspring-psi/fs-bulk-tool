@@ -12,7 +12,7 @@ $(document).ready(function(){
 });
 
 $('#discount-form-submit').click(function() {
-  system.log('test');
+  console.log('test');
 });
 function testPrint() {
   var percent = document.getElementById("pcntOff").value;
