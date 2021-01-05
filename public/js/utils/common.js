@@ -24,6 +24,8 @@ function getToken() {
 
 //TODO
 //Make submit function independent of page ie accept arguments
+//If no date change payload
+//If no disc reason
 function submitSelectedDiscount() {
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
