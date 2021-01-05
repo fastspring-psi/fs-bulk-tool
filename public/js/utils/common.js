@@ -45,9 +45,6 @@ function submitSelectedDiscount() {
   `
   {
     "product" : "${product}",
-    "display" : {
-      "en" : "String"
-    },
     "pricing" : {
       "quantityDiscounts" : {
         "${prodQty}" : ${percent}
