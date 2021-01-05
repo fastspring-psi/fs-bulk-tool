@@ -81,11 +81,9 @@ function renderSelectedDiscountForm() {
         <textarea rows="4" class="form-control" id="discReason" name="text" placeholder="Please give a reason for the discount."></textarea>
       </div>
       <div class="form-group">
-        <div>
-          <button class="btn btn-primary " id="discount-form-submit" name="submit" type="button" onclick="return selectedDiscountSubmit()">
-            Submit
-          </button>
-        </div>
       </div>
-    </form>`);
+    </form>
+    <button class="btn btn-primary " id="discount-form-submit" name="submit" type="button" onclick="return selectedDiscountSubmit()">
+      Submit
+    </button>`);
 }
