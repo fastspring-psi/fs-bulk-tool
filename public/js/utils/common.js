@@ -34,13 +34,14 @@ function selectedDiscountSubmit() {
   var productsTable = document.getElementById("table-products");
 
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
-
+  var productPaths = [];
   for(var i = 0; i < checkBoxes.length; i++){
     if(checkBoxes[i].checked){
       var row = checkBoxes[i].parentNode.parentNode;
-      console.log(row.cells[1].getAttribute("data-path"));
+      productPaths.append(row.cells[1].getAttribute("data-path"));
     }
   }
+  console.log(productPaths);
 }
 
 function testPrint() {
