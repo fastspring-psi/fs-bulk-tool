@@ -52,6 +52,7 @@ function submitSelectedDiscount() {
       "quantityDiscounts" : {
         "${prodQty}" : ${percent}
       },
+      "dateLimitsEnabled": true,
       "dateLimits" : {
         "start" : "${dateStart}",
         "end" : "${dateEnd}"
