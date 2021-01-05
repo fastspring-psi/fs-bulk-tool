@@ -32,9 +32,41 @@ function submitSelectedDiscount() {
   var dateStart = document.getElementById("dateStart").value;
   var dateEnd = document.getElementById("dateEnd").value;
   var discReason = document.getElementById("discReason").value;
-  console.log(typeof(dateStart));
-  var productsTable = document.getElementById("table-products");
 
+  var dates_body = '';
+  if(datetart && dateEnd){
+    dates_body = `
+    ,"dateLimitsEnabled": true,
+    "dateLimits" : {
+      "start" : "${dateStart}",
+      "end" : "${dateEnd}"
+    },
+    `
+  } elseif(dateStart){
+    dates_body = `
+    ,"dateLimitsEnabled": true,
+    "dateLimits" : {
+      "start" : "${dateStart}"
+    },
+    `
+  } elseif(dateEnd){
+    dates_body = `
+    ,"dateLimitsEnabled": true,
+    "dateLimits" : {
+      "end" : "${dateEnd}"
+    }
+    `
+  }
+  var discReason_body = '';
+  if(discReason){
+    discReason_body = `
+    ,"discountReason" : {
+      "en" : "${discReason}"
+    }
+    `
+  }
+
+  var productsTable = document.getElementById("table-products");
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
   var productPaths = [];
   for(var i = 0; i < checkBoxes.length; i++){
@@ -50,15 +82,8 @@ function submitSelectedDiscount() {
     "pricing" : {
       "quantityDiscounts" : {
         "${prodQty}" : ${percent}
-      },
-      "dateLimitsEnabled": true,
-      "dateLimits" : {
-        "start" : "${dateStart}",
-        "end" : "${dateEnd}"
-      },
-      "discountReason" : {
-        "en" : "${discReason}"
-      }
+      }${dates_body}
+      ${discReason_body}
     }
   } ${productPaths[i+1] ? ',' : ''}
   `
