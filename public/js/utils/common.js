@@ -42,14 +42,14 @@ function submitSelectedDiscount() {
       "end" : "${dateEnd}"
     },
     `
-  } elseif(dateStart){
+  }elseif(dateStart){
     dates_body = `
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
       "start" : "${dateStart}"
     },
     `
-  } elseif(dateEnd){
+  }elseif(dateEnd){
     dates_body = `
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
