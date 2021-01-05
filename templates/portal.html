@@ -75,12 +75,12 @@
                         $('#form-container').append(formElement);
 
                         //used for table row selecting
-                        $('.table tr.product-row').click(function(event){
+                        /*$('.table tr.product-row').click(function(event){
                           event.preventDefault();
                           if (event.target.type !== 'checkbox') {
                             $(':checkbox', this).trigger('click');
                           }
-                        });
+                        });*/
                     } else {
                         forceLogout(resPortal.error);
                     }
