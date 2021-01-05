@@ -9,7 +9,7 @@ $(document).ready(function(){
     autoclose: true,
   };
   date_input.datepicker(options);
-});
+})
 
 //TODO
 //Make submit function independent of page ie accept arguments
