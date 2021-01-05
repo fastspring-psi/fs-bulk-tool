@@ -30,7 +30,7 @@ function submitSelectedDiscount() {
   var dateStart = document.getElementById("dateStart").value;
   var dateEnd = document.getElementById("dateEnd").value;
   var discReason = document.getElementById("discReason").value;
-
+  console.log(typeof(dateStart));
   var productsTable = document.getElementById("table-products");
 
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
