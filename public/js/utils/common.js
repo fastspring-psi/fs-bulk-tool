@@ -32,38 +32,38 @@ function submitSelectedDiscount() {
   var dateStart = document.getElementById("dateStart").value;
   var dateEnd = document.getElementById("dateEnd").value;
   var discReason = document.getElementById("discReason").value;
-
+  if(test)
   var dates_body = '';
-  if(datetart && dateEnd){
-    dates_body = `
+  if(dateStart && dateEnd){
+    dates_body = (`
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
       "start" : "${dateStart}",
       "end" : "${dateEnd}"
     },
-    `
+    `);
   }elseif(dateStart){
-    dates_body = `
+    dates_body = (`
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
       "start" : "${dateStart}"
     },
-    `
+    `);
   }elseif(dateEnd){
-    dates_body = `
+    dates_body = (`
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
       "end" : "${dateEnd}"
     }
-    `
+    `);
   }
   var discReason_body = '';
   if(discReason){
-    discReason_body = `
+    discReason_body = (`
     ,"discountReason" : {
       "en" : "${discReason}"
     }
-    `
+    `);
   }
 
   var productsTable = document.getElementById("table-products");
@@ -75,6 +75,7 @@ function submitSelectedDiscount() {
       productPaths.push(row.cells[1].getAttribute("data-path"));
     }
   }
+
   var productBodies = productPaths.map((product, i) =>
   `
   {
