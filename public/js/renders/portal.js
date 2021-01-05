@@ -19,7 +19,7 @@ function renderProductDiscounts(product) {
   let discounts = '';
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
     discounts = Object.keys(product.pricing.quantityDiscounts).map((key,i) => (
-      `<span> ${product.pricing.quantityDiscounts[key]}% off ${key} ${i+1 < Object.keys(product.pricing.quantityDiscounts).legnth ? ',' : ''}</span>`
+      `<span> ${product.pricing.quantityDiscounts[key]}% off ${key} ${i+1 < Object.keys(product.pricing.quantityDiscounts).length ? ',' : ''}</span>`
     )).join('');
   } else {
     discounts = "No discounts";
