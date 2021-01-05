@@ -27,8 +27,8 @@ function getToken() {
 function submitSelectedDiscount() {
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
-  var dateStart = document.getElementById("dateStart").value;
-  var dateEnd = document.getElementById("dateEnd").value;
+  var dateStart = document.getElementById("dateStart").value.toISOString();
+  var dateEnd = document.getElementById("dateEnd").value.toISOString();
   var discReason = document.getElementById("discReason").value;
   console.log(typeof(dateStart));
   var productsTable = document.getElementById("table-products");
