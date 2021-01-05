@@ -33,7 +33,7 @@ function renderProductDiscountDateLimits(product) {
   let dateLimits = '';
   if (product.pricing.dateLimits && Object.keys(product.pricing.dateLimits).length > 0) {
     dateLimits = Object.keys(product.pricing.dateLimits).map((key) => (
-      `<span> ${key} : ${product.pricing.dateLimits[key]} </span>`
+      `<span> ${key} : ${product.pricing.dateLimits[key]}${i+1 < Object.keys(product.pricing.dateLimits).length ? '<br/>' : ''} </span>`
     )).join('');
   } else {
     dateLimits = "No date limits";
