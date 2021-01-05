@@ -38,7 +38,7 @@ function selectedDiscountSubmit() {
   for(var i = 0; i < checkBoxes.length; i++){
     if(checkBoxes[i].checked){
       var row = checkBoxes[i].parentNode.parentNode;
-      productPaths.append(row.cells[1].getAttribute("data-path"));
+      productPaths.push(row.cells[1].getAttribute("data-path"));
     }
   }
   console.log(productPaths);
