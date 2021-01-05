@@ -34,7 +34,7 @@ function submitSelectedDiscount() {
   var discReason = document.getElementById("discReason").value;
   if(test)
   var dates_body = '';
-  if(dateStart && dateEnd){
+  if(dateStart){
     dates_body = (`
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
