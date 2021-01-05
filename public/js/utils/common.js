@@ -21,3 +21,38 @@ function getToken() {
         return token;
     }
 }
+
+//TODO
+//Make submit function independent of page ie accept arguments
+function selectedDiscountSubmit() {
+  debugger;
+  var percent = document.getElementById("pcntOff").value;
+  var prodQty = document.getElementById("prodQty").value;
+  var dateStart = document.getElementById("dateStart").value;
+  var dateEnd = document.getElementById("dateEnd").value;
+  var discReason = document.getElementById("discReason").value;
+
+  var productsTable = document.getElementById("table-products");
+
+  var checkBoxes = productsTable.getElementsByTagName("INPUT");
+
+  for(var i = 0; i < checkBoxes.length; i++){
+    if(checkBoxes[i].checked){
+      console.log(i);
+    }
+  }
+}
+
+function testPrint() {
+  var percent = document.getElementById("pcntOff").value;
+  var prodQty = document.getElementById("prodQty").value;
+  var dateStart = document.getElementById("dateStart").value;
+  var dateEnd = document.getElementById("dateEnd").value;
+  var discReason = document.getElementById("discReason").value;
+
+  var newWin=window.open('','Print-Window');
+  newWin.document.open();
+  newWin.document.write(percent,prodQty,dateStart,dateEnd,discReason);
+  newWin.document.close();
+  setTimeout(function(){newWin.close();},10);
+}
