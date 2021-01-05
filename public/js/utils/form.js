@@ -46,7 +46,7 @@ function testPrint() {
   setTimeout(function(){newWin.close();},10);
 }
 
-function renderDiscountForm() {
+function renderSelectedDiscountForm() {
   return(`
     <form>
       <div class="form-group">
