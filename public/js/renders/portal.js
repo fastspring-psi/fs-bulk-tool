@@ -41,6 +41,15 @@ function renderProductDiscountDateLimits(product) {
   return(dateLimits);
 }
 
+function renderProductDiscountReason(product) {
+  let discountReason = '';
+  if (product.pricing.discountReason && Object.keys(product.pricing.discountReason).length > 0) {
+    discountReason = Object.keys(product.pricing.discountReason).map((key) => (
+      `<span> ${product.pricing.discountReason[key]} </span>`
+    )).join('');
+  }
+  return(discountReason);
+}
 
 //TO DO:
 //Handle multiple prices
@@ -57,6 +66,7 @@ function renderProductsTable(products) {
     <td> $${product.pricing.price.USD} </td>
     <td> ${renderProductDiscounts(product)} </td>
     <td> ${renderProductDiscountDateLimits(product)} </td>
+    <td> ${renderProductDiscountReason(product)} </td>
   </tr>
   `
   );
@@ -71,6 +81,7 @@ function renderProductsTable(products) {
               <th scope="col"> Price </th>
               <th scope="col"> Discount </th>
               <th scope="col"> Discount Date Limits </th>
+              <th scope="col"> Discount Reason </th>
             </tr>
           </thead>
           ${productRows.join('')}
