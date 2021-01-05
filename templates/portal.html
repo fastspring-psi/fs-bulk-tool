@@ -86,7 +86,8 @@
                                 return d.toISOString();
                               },
                               toValue: function(date, format, language) {
-                                return new Date(date);
+                                var d = new Date(date);
+                                return "test";
                               }
                             },
                             container: container,
