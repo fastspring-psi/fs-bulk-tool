@@ -32,9 +32,9 @@ function submitSelectedDiscount() {
   var dateStart = document.getElementById("dateStart").value;
   var dateEnd = document.getElementById("dateEnd").value;
   var discReason = document.getElementById("discReason").value;
-  if(test)
+
   var dates_body = '';
-  if(dateStart){
+  if(dateStart && dateEnd){
     dates_body = (`
     ,"dateLimitsEnabled": true,
     "dateLimits" : {
