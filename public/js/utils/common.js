@@ -24,7 +24,7 @@ function getToken() {
 
 //TODO
 //Make submit function independent of page ie accept arguments
-function selectedDiscountSubmit() {
+function submitSelectedDiscount() {
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
   var dateStart = document.getElementById("dateStart").value;
@@ -41,7 +41,30 @@ function selectedDiscountSubmit() {
       productPaths.push(row.cells[1].getAttribute("data-path"));
     }
   }
-  console.log(productPaths);
+  var productBodies = productPaths.map((product, i) =>
+  `
+  {
+    "product" : "${product}",
+    "display" : {
+      "en" : "String"
+    },
+    "pricing" : {
+      "quantityDiscounts" : {
+        "${prodQty}" : ${percent}
+      },
+      "dateLimits" : {
+        "start" : "${dateStart}",
+        "end" : "${dateEnd}"
+      },
+      "discountReason" : {
+        "en" : "${discReason}"
+      }
+    }
+  } ${productPaths[i+1] ? ',' : ''}
+  `
+  );
+
+  console.log(productBodies);
 }
 
 function testPrint() {

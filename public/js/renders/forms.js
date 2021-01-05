@@ -35,7 +35,7 @@ function renderSelectedDiscountForm() {
       <div class="form-group">
       </div>
     </form>
-    <button class="btn btn-primary " id="discount-form-submit" name="submit" type="button" onclick="return selectedDiscountSubmit()">
+    <button class="btn btn-primary " id="discount-form-submit" name="submit" type="button" onclick="return submitSelectedDiscount()">
       Submit
     </button>`);
 }
