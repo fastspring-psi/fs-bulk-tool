@@ -25,7 +25,6 @@ function getToken() {
 //TODO
 //Make submit function independent of page ie accept arguments
 function selectedDiscountSubmit() {
-  debugger;
   var percent = document.getElementById("pcntOff").value;
   var prodQty = document.getElementById("prodQty").value;
   var dateStart = document.getElementById("dateStart").value;
@@ -38,7 +37,8 @@ function selectedDiscountSubmit() {
 
   for(var i = 0; i < checkBoxes.length; i++){
     if(checkBoxes[i].checked){
-      console.log(i);
+      var row = checkBoxes[i].parentNode.parentNode;
+      console.log(row.cells[1].getAttribute("data-path"));
     }
   }
 }
