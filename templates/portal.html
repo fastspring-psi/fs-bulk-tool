@@ -64,7 +64,7 @@
                         //Call intial form not products table
                         //Only insert jquery for select table row if there are products
                         //Validate discount form before submit goes through
-                        
+
                         const productsElement = resPortal.products.length > 0 ?
                             renderProductsTable(resPortal.products)
                             :
@@ -76,6 +76,7 @@
 
                         //used for table row selecting
                         $('.table tr.product-row').click(function(event){
+                          event.preventDefault();
                           if (event.target.type !== 'checkbox') {
                             $(':checkbox', this).trigger('click');
                           }
