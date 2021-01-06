@@ -27,45 +27,21 @@ function getToken() {
 //If no date change payload
 //If no disc reason
 function submitSelectedDiscount() {
-  var percent = document.getElementById("pcntOff").value;
-  var prodQty = document.getElementById("prodQty").value;
-  var dateStart = document.getElementById("dateStart").value;
-  var dateEnd = document.getElementById("dateEnd").value;
-  var discReason = document.getElementById("discReason").value;
+  const percent = document.getElementById("pcntOff").value;
+  const prodQty = document.getElementById("prodQty").value;
+  const dateStart = document.getElementById("dateStart").value;
+  const dateEnd = document.getElementById("dateEnd").value;
+  const discReason = document.getElementById("discReason").value;
 
-  /*var dates_body = '';
-  if(dateStart && dateEnd){
-    dates_body = (`
-    ,"dateLimitsEnabled": true,
-    "dateLimits" : {
-      "start" : "${dateStart}",
-      "end" : "${dateEnd}"
-    }
-    `);
-  }elseif(dateStart){
-    dates_body = (`
-    ,"dateLimitsEnabled": true,
-    "dateLimits" : {
-      "start" : "${dateStart}"
-    }
-    `);
-  }elseif(dateEnd){
-    dates_body = (`
-    ,"dateLimitsEnabled": true,
-    "dateLimits" : {
-      "end" : "${dateEnd}"
-    }
-    `);
-  }
+  const attributes = {};
 
-  var discReason_body = '';
-  if(discReason){
-    discReason_body = (`
-    ,"discountReason" : {
-      "en" : "${discReason}"
-    }
-    `);
-  }*/
+  attributes[pricing].quantityDiscounts[prodQty] = percent;
+  attributes[pricing].dateLimitsEnabled = true;
+  attributes[pricing].dateLimits[start] = dateStart;
+  attributes[pricing].dateLimits[end] = dateEnd;
+  attributes[pricing].discountReason[en] = discReason;
+
+  console.log(attributes); 
 
   var productsTable = document.getElementById("table-products");
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
@@ -97,28 +73,6 @@ function submitSelectedDiscount() {
   `
 );*/
 
-  const payload = {
-    products : [
-      for(i = 0; i < productPaths.length; i++){
-        {
-          product: productPaths[i],
-          pricing: {
-            quantityDiscounts: {
-              prodQty: percent
-            },
-            dateLimitsEnabled: true,
-            dateLimits: {
-              start: dateStart,
-              end: dateEnd
-            },
-            discountReason: {
-              en: discReason
-            }
-          }
-        }if(i != productPaths.length-1){,}
-      }
-    ]
-  }
 
   console.log(payload);
 }
