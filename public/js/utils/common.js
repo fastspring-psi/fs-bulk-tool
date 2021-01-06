@@ -35,7 +35,7 @@ function submitSelectedDiscount() {
 
   const attributes = {};
 
-  attributes["pricing"].quantityDiscounts[prodQty] = percent;
+  attributes["pricing"]["quantityDiscounts"][prodQty] = percent;
   attributes["pricing"].dateLimitsEnabled = true;
   attributes["pricing"].dateLimits["start"] = dateStart;
   attributes["pricing"].dateLimits["end"] = dateEnd;
