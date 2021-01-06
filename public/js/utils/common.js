@@ -47,7 +47,7 @@ function submitSelectedDiscount() {
     alert('Please fill in all discount fields');
     return;
   }
-
+  console.log(productPaths.length);
   if(productPaths.length < 0) {
     alert('Please select products to apply discount to');
     return;
@@ -76,18 +76,4 @@ function submitSelectedDiscount() {
   }
 
   console.log(payload);
-}
-
-function testPrint() {
-  var percent = document.getElementById("pcntOff").value;
-  var prodQty = document.getElementById("prodQty").value;
-  var dateStart = document.getElementById("dateStart").value;
-  var dateEnd = document.getElementById("dateEnd").value;
-  var discReason = document.getElementById("discReason").value;
-
-  var newWin=window.open('','Print-Window');
-  newWin.document.open();
-  newWin.document.write(percent,prodQty,dateStart,dateEnd,discReason);
-  newWin.document.close();
-  setTimeout(function(){newWin.close();},10);
 }
