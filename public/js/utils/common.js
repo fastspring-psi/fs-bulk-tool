@@ -77,7 +77,7 @@ function submitSelectedDiscount() {
     }
   }
 
-  var productBodies = productPaths.map((product, i) =>
+/*  var productBodies = productPaths.map((product, i) =>
   `
   {
     "product" : "${product}",
@@ -95,9 +95,32 @@ function submitSelectedDiscount() {
     }
   } ${productPaths[i+1] ? ',' : ''}
   `
-  );
+);*/
 
-  console.log(productBodies);
+  const payload = {
+    products : [
+      for(i = 0; i < productPaths.length; i++){
+        {
+          product: productPaths[i],
+          pricing: {
+            quantityDiscounts: {
+              prodQty: percent
+            },
+            dateLimitsEnabled: true,
+            dateLimits: {
+              start: dateStart,
+              end: dateEnd
+            },
+            discountReason: {
+              en: discReason
+            }
+          }
+        }if(i != productPaths.length-1){,}
+      }
+    ]
+  }
+
+  console.log(payload);
 }
 
 function testPrint() {
