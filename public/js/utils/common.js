@@ -35,13 +35,13 @@ function submitSelectedDiscount() {
 
   const attributes = {};
 
-  attributes[pricing].quantityDiscounts[prodQty] = percent;
-  attributes[pricing].dateLimitsEnabled = true;
-  attributes[pricing].dateLimits[start] = dateStart;
-  attributes[pricing].dateLimits[end] = dateEnd;
-  attributes[pricing].discountReason[en] = discReason;
+  attributes["pricing"].quantityDiscounts[prodQty] = percent;
+  attributes["pricing"].dateLimitsEnabled = true;
+  attributes["pricing"].dateLimits["start"] = dateStart;
+  attributes["pricing"].dateLimits["end"] = dateEnd;
+  attributes["pricing"].discountReason["en"] = discReason;
 
-  console.log(attributes); 
+  console.log(attributes);
 
   var productsTable = document.getElementById("table-products");
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
