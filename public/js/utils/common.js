@@ -33,19 +33,17 @@ function submitSelectedDiscount() {
   const dateEnd = document.getElementById("dateEnd").value;
   const discReason = document.getElementById("discReason").value;
 
-  const attributes = {
-    pricing: {
+  const pricing = {
       quantityDiscounts: {},
       dateLimitsEnabled: true,
       dateLimits: {},
       discountReason: {}
-    }
   };
 
-  attributes["pricing"].quantityDiscounts[prodQty] = percent;
-  attributes["pricing"].dateLimits["start"] = dateStart;
-  attributes["pricing"].dateLimits["end"] = dateEnd;
-  attributes["pricing"].discountReason["en"] = discReason;
+  pricing.quantityDiscounts[prodQty] = percent;
+  pricing.dateLimits["start"] = dateStart;
+  pricing.dateLimits["end"] = dateEnd;
+  pricing.discountReason["en"] = discReason;
 
   console.log(attributes);
 
@@ -67,7 +65,7 @@ function submitSelectedDiscount() {
     console.log(productPaths[i]);
     payload.products[i] = {
       product: productPaths[i],
-      attributes
+      pricing
     };
   }
 
