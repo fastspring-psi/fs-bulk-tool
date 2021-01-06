@@ -40,12 +40,16 @@ function submitSelectedDiscount() {
       discountReason: {}
   };
 
+  const payload = {
+    products: []
+  };
+
+  //// TODO:
+  // validation
   pricing.quantityDiscounts[prodQty] = percent;
   pricing.dateLimits["start"] = dateStart;
   pricing.dateLimits["end"] = dateEnd;
   pricing.discountReason["en"] = discReason;
-
-  console.log(attributes);
 
   var productsTable = document.getElementById("table-products");
   var checkBoxes = productsTable.getElementsByTagName("INPUT");
@@ -56,10 +60,6 @@ function submitSelectedDiscount() {
       productPaths.push(row.cells[1].getAttribute("data-path"));
     }
   }
-
-  var payload = {
-    products: []
-  };
 
   for(i = 0; i < productPaths.length; i++) {
     console.log(productPaths[i]);
