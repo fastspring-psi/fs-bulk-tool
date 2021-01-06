@@ -64,6 +64,7 @@ function submitSelectedDiscount() {
   };
 
   productPaths.forEach(function(product, index) {
+    console.log(product, index);
     payload[index] = {
       product: product,
       attributes
