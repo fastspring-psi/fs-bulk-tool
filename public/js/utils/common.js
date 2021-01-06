@@ -48,7 +48,7 @@ function submitSelectedDiscount() {
     return;
   }
   console.log(productPaths.length);
-  if(productPaths.length < 0) {
+  if(productPaths.length == 0) {
     alert('Please select products to apply discount to');
     return;
   }
