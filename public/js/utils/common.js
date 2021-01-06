@@ -33,10 +33,22 @@ function submitSelectedDiscount() {
   const dateEnd = document.getElementById("dateEnd").value;
   const discReason = document.getElementById("discReason").value;
 
-  const attributes = {};
+  const attributes = {
+    pricing: {
+      quantityDiscounts: {
 
-  attributes["pricing"]["quantityDiscounts"][prodQty] = percent;
-  attributes["pricing"].dateLimitsEnabled = true;
+      },
+      dateLimitsEnabled: true,
+      dateLimits: {
+
+      },
+      discountReason: {
+        en:
+      }
+    }
+  };
+
+  attributes["pricing"].quantityDiscounts[prodQty] = percent;
   attributes["pricing"].dateLimits["start"] = dateStart;
   attributes["pricing"].dateLimits["end"] = dateEnd;
   attributes["pricing"].discountReason["en"] = discReason;
