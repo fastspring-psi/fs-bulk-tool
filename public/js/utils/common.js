@@ -63,14 +63,12 @@ function submitSelectedDiscount() {
     products: []
   };
 
-  productPaths.forEach(function(product, index) {
-    console.log(product, index);
-    payload[index] = {
-      product: product,
+  for(i = 0; i < productPaths.length: i++) {
+    payload[i] = {
+      product: productPaths[i],
       attributes
     };
-  });
-
+  }
 
   console.log(payload);
 }
