@@ -18,11 +18,7 @@ getPortalDetails:
 
     #Product endpoints
 
-updateProducts:
-    path: /products
-    controller: App\Controller\ProductsController::updateProducts
-    methods: POST
-    
+
     #Templates
 
 loginPage:
