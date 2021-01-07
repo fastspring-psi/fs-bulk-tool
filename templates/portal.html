@@ -53,35 +53,6 @@
 
 
     <script type="text/javascript">
-        //used for table row selecting
-        $(document).ready(function(){
-          var date_input=$('input[name="date"]'); //our date input has the name "date"
-          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-          var options={
-            format: {
-              toDisplay: function(date, format, language) {
-                var d = new Date(date);
-                return d.toISOString();
-              },
-              toValue: function(date, format, language) {
-                var d = new Date(date);
-                return "test";
-              }
-            },
-            clearBtn: true,
-            container: container,
-            todayHighlight: true,
-            autoclose: true
-          };
-          date_input.datepicker(options);
-        })
-
-        $('.table tr.product-row').click(function(event){
-          event.preventDefault();
-          if (event.target.type !== 'checkbox') {
-            $(':checkbox', this).trigger('click');
-          }
-        });
         document.addEventListener('DOMContentLoaded', function() {
             //$('#loading-spinner').show();
             // Get all product details and render it
@@ -105,6 +76,35 @@
                         $('#products-container').append([productsElement]);
                         $('#form-container').append(formElement);
 
+                        //used for table row selecting
+                        $(document).ready(function(){
+                          var date_input=$('input[name="date"]'); //our date input has the name "date"
+                          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                          var options={
+                            format: {
+                              toDisplay: function(date, format, language) {
+                                var d = new Date(date);
+                                return d.toISOString();
+                              },
+                              toValue: function(date, format, language) {
+                                var d = new Date(date);
+                                return "test";
+                              }
+                            },
+                            clearBtn: true,
+                            container: container,
+                            todayHighlight: true,
+                            autoclose: true
+                          };
+                          date_input.datepicker(options);
+                        })
+
+                        $('.table tr.product-row').click(function(event){
+                          event.preventDefault();
+                          if (event.target.type !== 'checkbox') {
+                            $(':checkbox', this).trigger('click');
+                          }
+                        });
                     } else {
                         forceLogout(resPortal.error);
                     }

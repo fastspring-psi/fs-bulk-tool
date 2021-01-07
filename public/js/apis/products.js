@@ -75,6 +75,35 @@ function discountSelectedProducts() {
                           }
                           const formElement = renderSelectedDiscountForm();
                           $('#form-container').html(formElement);
+                          //used for table row selecting
+                          $(document).ready(function(){
+                            var date_input=$('input[name="date"]'); //our date input has the name "date"
+                            var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                            var options={
+                              format: {
+                                toDisplay: function(date, format, language) {
+                                  var d = new Date(date);
+                                  return d.toISOString();
+                                },
+                                toValue: function(date, format, language) {
+                                  var d = new Date(date);
+                                  return "test";
+                                }
+                              },
+                              clearBtn: true,
+                              container: container,
+                              todayHighlight: true,
+                              autoclose: true
+                            };
+                            date_input.datepicker(options);
+                          })
+
+                          $('.table tr.product-row').click(function(event){
+                            event.preventDefault();
+                            if (event.target.type !== 'checkbox') {
+                              $(':checkbox', this).trigger('click');
+                            }
+                          });
                     });
             }, 3000);
         } else {
