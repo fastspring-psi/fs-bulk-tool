@@ -295,3 +295,26 @@ input[type=text]:placeholder {
   text-align: center;
   visibility: hidden;
 }
+
+.pageLoader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.fs-spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+}
+
+.loading {
+    opacity: 0.3;
+}
+
+.hide {
+    display: none;
+}
