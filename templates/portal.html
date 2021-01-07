@@ -37,17 +37,14 @@
     <div class="container-color d-flex w-100 h-100 mx-auto flex-column">
         <main role="main" class="container">
           <h1> Bulk Discount </h1>
-            <!--<div id="loading-spinner" class="spinner-border pageLoader" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>-->
             <div id='form-container' class='card container'>
               <h3> Create a discount <br></h3>
                 <!-- Form will be populated here -->
             </div>
             <div id='products-container' class='card container'>
               <div id="loading-spinner" class="spinner-border pageLoader" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
+                <span class="sr-only">Loading...</span>
+              </div>
               <h3> Select products to discount <br></h3>
                 <!-- Content will be populated here -->
             </div>
@@ -57,7 +54,7 @@
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            //$('#loading-spinner').show();
+            $('#loading-spinner').show();
             // Get all product details and render it
             const token = getToken();
             $.post(`${window.location.origin}/getPortalDetails`, { token })
@@ -76,6 +73,7 @@
                             renderNoProducts(resPortal.products);
                         ;
                         const formElement = renderSelectedDiscountForm();
+                        $('#loading-spinner').hide();
                         $('#products-container').append([productsElement]);
                         $('#form-container').append(formElement);
 

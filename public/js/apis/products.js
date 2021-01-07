@@ -52,7 +52,7 @@ function discountSelectedProducts() {
   const token = getToken();
   payload.token = token;
 
-  //add loading spinner
+  $('#loading-spinner').show();
 
   // Perform charge request
   //TODO add iterated success verification
@@ -70,6 +70,7 @@ function discountSelectedProducts() {
                                   :
                                   renderNoProducts(resPortal.products);
                               ;
+                              $('#loading-spinner').hide();
                               $('#products-container').html([productsElement]);
 
                           }
