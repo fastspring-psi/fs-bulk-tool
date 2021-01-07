@@ -58,6 +58,7 @@ function discountSelectedProducts() {
   // Perform charge request
   //TODO add iterated success verification
   $.post(`${window.location.origin}/products`, payload)
+      console.log("posted");
       .done((resUpdatedProds) => {
           if (resUpdatedProds && resUpdatedProds.success && resUpdatedProds.response.products) {
               // Reload table content
