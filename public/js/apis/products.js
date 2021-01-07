@@ -53,13 +53,11 @@ function discountSelectedProducts() {
   payload.token = token;
 
   //add loading spinner
-  console.log(payload);
 
   // Perform charge request
   //TODO add iterated success verification
   $.post(`${window.location.origin}/products`, payload)
       .done((resUpdatedProds) => {
-          console.log("posted");
           if (resUpdatedProds && resUpdatedProds.success && resUpdatedProds.response.products) {
               // Reload table content
               // Give 2 seconds for changes to reflect in API
