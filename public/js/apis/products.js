@@ -76,7 +76,7 @@ function discountSelectedProducts() {
 
                           }
                           const formElement = renderSelectedDiscountForm();
-                          $('#form-container').append(formElement);
+                          $('#form-container').html(formElement);
                     });
             }, 3000);
         } else {
