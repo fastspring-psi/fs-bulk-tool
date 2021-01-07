@@ -64,7 +64,7 @@ function discountSelectedProducts() {
               // Reload table content
               // Give 2 seconds for changes to reflect in API
               setTimeout(function() {
-                  $.post(`${window.location.origin}/getPortalDetails`, { token, accountId })
+                  $.post(`${window.location.origin}/getPortalDetails`, { token })
                       .done((resPortal) => {
                           if (resPortal && resPortal.success) {
                               const productsElement = resPortal.products.length > 0 ?
