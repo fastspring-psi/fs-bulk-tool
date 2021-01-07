@@ -2,7 +2,7 @@
 //Make submit function independent of page ie accept arguments
 //If no date change payload
 //If no disc reason
-function submitSelectedDiscount() {
+function discountSelectedProducts() {
   const percent = document.getElementById("pcntOff").value;
   const prodQty = document.getElementById("prodQty").value;
   const dateStart = document.getElementById("dateStart").value;
@@ -52,5 +52,36 @@ function submitSelectedDiscount() {
   const token = getToken();
   payload.token = token;
 
+  //add loading spinner
   console.log(payload);
+
+  // Perform charge request
+  //TODO add iterated success verification
+  $.post(`${window.location.origin}/products`, payload)
+      .done((resUpdatedProds) => {
+          if (resUpdatedProds && resUpdatedProds.success && resUpdatedProds.response.products) {
+              // Reload table content
+              // Give 2 seconds for changes to reflect in API
+              setTimeout(function() {
+                  $.post(`${window.location.origin}/getPortalDetails`, { token, accountId })
+                      .done((resPortal) => {
+                          if (resPortal && resPortal.success) {
+                              const productsElement = resPortal.products.length > 0 ?
+                                  renderProductsTable(resPortal.products)
+                                  :
+                                  renderNoProducts(resPortal.products);
+                              ;
+                              $('#products-container').html([productsElement]);
+
+                          }
+                          const formElement = renderSelectedDiscountForm();
+                          $('#form-container').append(formElement);
+                    });
+            }, 3000);
+        } else {
+            alert('Could not update products, please make sure products exists');
+            const formElement = renderSelectedDiscountForm();
+            $('#form-container').append(formElement);
+        }
+    });
 }

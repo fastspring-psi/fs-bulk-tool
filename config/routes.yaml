@@ -15,6 +15,13 @@ getPortalDetails:
     path: /getPortalDetails
     controller: App\Controller\PortalController::getPortalDetails
     methods: POST
+
+    #Product endpoints
+
+updateProducts:
+    path: /products
+    controller: App\Controller\ProductsController::updateProducts
+    methods: POST
     
     #Templates
 
