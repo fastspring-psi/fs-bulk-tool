@@ -17,7 +17,7 @@ use App\Utils\AuthRequest;
  *  Controller class for the /products endpoint
  */
 
-class ProductController extends AbstractController
+class ProductsController extends AbstractController
 {
     /*
      *  It forwards the POST data sent by the client to the /products endpoint
