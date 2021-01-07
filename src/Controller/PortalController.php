@@ -46,12 +46,12 @@ class PortalController extends AbstractController
             }
             // Dumby portal ID
             // TO DO: Store unique portal ID to prevent duplicates
-            $portalId = uniqid();
+            //$portalId = uniqid();
             // Create token
             $cryptor = new Cryptor();
             $token = $cryptor->encrypt($username.":".$password);
             // Return credentials in encrypted token
-            return new JsonResponse(['success' => true, 'token' => $token, 'portalId' => $portalId]);
+            return new JsonResponse(['success' => true, 'token' => $token]);
         } catch (Exception $e) {
             return new JsonResponse(['success' => false, 'error' => $e->getMessage()]);
         }

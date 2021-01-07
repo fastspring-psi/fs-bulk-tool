@@ -22,7 +22,7 @@ updateProducts:
     path: /products
     controller: App\Controller\ProductsController::updateProducts
     methods: POST
-    
+
     #Templates
 
 loginPage:
@@ -33,7 +33,7 @@ loginPage:
     methods: GET
 
 portalTemplate:
-    path:         /{portalId}/overview.html
+    path:         /overview.html
     controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
     defaults:
         template: portal.html

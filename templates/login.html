@@ -53,10 +53,10 @@
                         const { portalId, token } = resLogin;
                         // Store private token in local storage
                         sessionStorage.setItem('FS-token', JSON.stringify(token));
-                        console.log(token);
-                        console.log(portalId);
+                        //console.log(token);
+                        //console.log(portalId);
                         // Redirect to user portal
-                        window.location.href = `/${portalId}/overview.html`;
+                        window.location.href = `/overview.html`;
                     } else {
                         alert(resLogin.error);
                     }
