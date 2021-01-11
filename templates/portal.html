@@ -82,12 +82,7 @@
                           var date_input=$('input[name="date"]'); //our date input has the name "date"
                           var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
                           var options={
-                            format: {
-                              toDisplay: function(date, format, language) {
-                                var d = new Date(date);
-                                return d.toISOString();
-                              }
-                            },
+                            format: "YYYY-MM-DD",
                             clearBtn: true,
                             container: container,
                             todayHighlight: true,
