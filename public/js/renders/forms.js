@@ -1,5 +1,6 @@
 function renderSelectedDiscountForm() {
   return(`
+    <h3> Create a discount <br></h3>
     <form>
       <div class="form-group">
         <div class="input-group mb-3" id="discount-amount-group">

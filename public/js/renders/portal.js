@@ -71,6 +71,10 @@ function renderProductsTable(products) {
   `
   );
   return (`
+    <div id="loading-spinner" class="spinner-border pageLoader" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <h3> Select products to discount <br></h3>
     <div id="products-table-container" class="row">
       <div class='col'>
         <table class="table table-hover" id="table-products">
