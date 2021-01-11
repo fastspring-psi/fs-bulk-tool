@@ -39,8 +39,8 @@ function discountSelectedProducts() {
   };
 
   pricing.quantityDiscounts[prodQty] = percent;
-  pricing.dateLimits["start"] = dateStart;
-  pricing.dateLimits["end"] = dateEnd;
+  pricing.dateLimits["start"] = dateStart + " 00:00";
+  pricing.dateLimits["end"] = dateEnd + " 23:59";
   pricing.discountReason["en"] = discReason;
   for(i = 0; i < productPaths.length; i++) {
     payload.products[i] = {
@@ -81,16 +81,7 @@ function discountSelectedProducts() {
                             var date_input=$('input[name="date"]'); //our date input has the name "date"
                             var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
                             var options={
-                              format: {
-                                toDisplay: function(date, format, language) {
-                                  var d = new Date(date);
-                                  return d.toISOString();
-                                },
-                                toValue: function(date, format, language) {
-                                  var d = new Date(date);
-                                  return "test";
-                                }
-                              },
+                              format: "yyyy-mm-dd",
                               clearBtn: true,
                               container: container,
                               todayHighlight: true,

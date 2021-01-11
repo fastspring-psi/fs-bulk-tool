@@ -22,9 +22,9 @@ function renderSelectedDiscountForm() {
       </div>
       <div class="form-group" id="discount-date-range-group">
         <span class="input-group-text" for="dateStart">From</span>
-        <input class="form-control" id="dateStart" name="date" placeholder="MM/DD/YYY" type="text" readonly/>
+        <input class="form-control" id="dateStart" name="date" placeholder="YYYY-MM-DD" type="text" readonly/>
         <span class="input-group-text" for="dateEnd">To</span>
-        <input class="form-control" id="dateEnd" name="date" placeholder="MM/DD/YYY" type="text" readonly/>
+        <input class="form-control" id="dateEnd" name="date" placeholder="YYYY-MM-DD" type="text" readonly/>
       </div>
       <div class="form-group">
         <label class="input-group-text" for="discReason">
