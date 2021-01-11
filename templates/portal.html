@@ -85,11 +85,7 @@
                             format: {
                               toDisplay: function(date, format, language) {
                                 var d = new Date(date);
-                                return d.toISOString();
-                              },
-                              toValue: function(date, format, language) {
-                                var d = new Date(date);
-                                return "test";
+                                return d;
                               }
                             },
                             clearBtn: true,
