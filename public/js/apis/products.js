@@ -39,8 +39,8 @@ function discountSelectedProducts() {
   };
 
   pricing.quantityDiscounts[prodQty] = percent;
-  pricing.dateLimits["start"] = dateStart + " 00:00";
-  pricing.dateLimits["end"] = dateEnd + " 23:59";
+  pricing.dateLimits["start"] = dateStart;
+  pricing.dateLimits["end"] = dateEnd;
   pricing.discountReason["en"] = discReason;
   for(i = 0; i < productPaths.length; i++) {
     payload.products[i] = {
@@ -53,7 +53,7 @@ function discountSelectedProducts() {
   payload.token = token;
 
   console.log(payload);
-  debugger;
+  
   $('#loading-spinner').show();
 
   // Perform charge request
