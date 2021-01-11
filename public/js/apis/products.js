@@ -52,6 +52,7 @@ function discountSelectedProducts() {
   const token = getToken();
   payload.token = token;
 
+  console.log(payload);
   $('#loading-spinner').show();
 
   // Perform charge request
