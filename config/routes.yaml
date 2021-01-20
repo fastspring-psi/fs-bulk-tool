@@ -5,6 +5,7 @@
 #        template: login.html
 #    methods: GET
 
+#TODO make starting route to /login.html
     #Portal endpoints
 login:
     path: /login

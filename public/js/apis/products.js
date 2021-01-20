@@ -2,6 +2,8 @@
 //Make submit function independent of page ie accept arguments
 //If no date change payload
 //If no disc reason
+
+//This function works with the forms.js render
 function discountSelectedProducts() {
   const percent = document.getElementById("pcntOff").value;
   const prodQty = document.getElementById("prodQty").value;
@@ -53,7 +55,7 @@ function discountSelectedProducts() {
   payload.token = token;
 
   console.log(payload);
-  
+
   $('#loading-spinner').show();
 
   // Perform charge request

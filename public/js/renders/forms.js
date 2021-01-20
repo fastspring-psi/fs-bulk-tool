@@ -1,3 +1,4 @@
+//TODO - create discount each time a discount is added
 function renderSelectedDiscountForm() {
   return(`
     <h3> Create a discount <br></h3>

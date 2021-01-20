@@ -8,13 +8,6 @@ function renderNoProducts() {
   `);
 }
 
-/*            <td> ${product.pricing.price.USD} </td>
-            <td> ${(product.hasOwnProperty('quantityDiscounts')) ?  product.pricing.quantityDiscounts : ''} </td>
-            <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.start : ''} </td>
-            <td> ${(product.hasOwnProperty('dateLimits')) ? product.pricing.dateLimits.end : ''} </td>*/
-
-//TODO:
-//Display %off with commas
 function renderProductDiscounts(product) {
   let discounts = '';
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
