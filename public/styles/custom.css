@@ -267,10 +267,6 @@ input[type=text]:placeholder {
   padding: 35px;
 }
 
-#form-container {
-  margin-top: 30px;
-}
-
 #discount-amount-group {
   display: inline-flex;
   width: 30%;
