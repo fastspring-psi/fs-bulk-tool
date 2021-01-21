@@ -102,6 +102,8 @@
                             $(':checkbox', this).trigger('click');
                           }
                         });
+
+                        $('[data-toggle="tooltip"]').tooltip()
                     } else {
                         forceLogout(resPortal.error);
                     }
