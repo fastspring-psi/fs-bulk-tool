@@ -292,9 +292,10 @@ input[type=text]:placeholder {
 }
 
 .tooltip-inner{
-  background-color: #cccccc;
+  background-color: #e9ecef;
   color: #000000;
   text-align: left;
+  border: 1px solid #ced4da;
 }
 
 .overlay{
