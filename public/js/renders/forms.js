@@ -28,7 +28,7 @@ function renderSelectedDiscountForm() {
         <input class="form-control" id="dateStart" name="date" placeholder="YYYY-MM-DD" type="text" readonly/>
         <span class="input-group-text" for="dateEnd">To</span>
         <input class="form-control" id="dateEnd" name="date" placeholder="YYYY-MM-DD" type="text" readonly/>
-        <span class="form-tooltip"data-toggle="tooltip" data-placement="right" data-html="true" title="<h6>Discount Date Range<br><h6><p>The discount date range determines when your discount will start and end. Dates start at 00:00 of the given day. eg. If you would like a discount to end on YYYY-01-20 you would select YYYY-01-21 as the end date.</p>">&nbsp;&#9432<span>
+        <span class="form-tooltip"data-toggle="tooltip" data-placement="right" data-html="true" title="<h6>Discount Date Range<br></h6><p>The discount date range determines when your discount will start and end. Dates start at 00:00 of the given day. eg. If you would like a discount to end on YYYY-01-20 you would select YYYY-01-21 as the end date.</p>">&nbsp;&#9432<span>
       </div>
       <div class="form-group">
         <label class="input-group-text" for="discReason">
