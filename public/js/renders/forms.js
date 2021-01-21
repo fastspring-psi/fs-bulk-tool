@@ -28,6 +28,7 @@ function renderSelectedDiscountForm() {
         <input class="form-control" id="dateStart" name="date" placeholder="YYYY-MM-DD" type="text" readonly/>
         <span class="input-group-text" for="dateEnd">To</span>
         <input class="form-control" id="dateEnd" name="date" placeholder="YYYY-MM-DD" type="text" readonly/>
+        <span class="form-tooltip"data-toggle="tooltip" data-placement="right" title="TEST TEST TEST">&nbsp;&#9432<span>
       </div>
       <div class="form-group">
         <label class="input-group-text" for="discReason">
