@@ -291,7 +291,7 @@ input[type=text]:placeholder {
   vertical-align: bottom;
 }
 
-.tooltip{
+.tooltip-inner{
   background-color: #c6cace;
   color: #000000;
 }
