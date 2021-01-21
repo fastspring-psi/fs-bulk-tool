@@ -45,11 +45,7 @@ function renderProductDiscountReason(product) {
 }
 
 //TO DO:
-//Handle multiple prices
-//Need to check if there are discounts or not
-//Add logic to display discounts in a readable way
-//Decide what information to show --> what is the best way to display product information and allow for quick editing?
-//
+//Add select all & deselect  all
 function renderProductsTable(products) {
   const productRows = products.map((product) =>
   `

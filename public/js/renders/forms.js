@@ -1,7 +1,7 @@
 //TODO - create discount each time a discount is added
+//add tooltips for explenation
 function renderSelectedDiscountForm() {
   return(`
-    <h3> Create a discount <br></h3>
     <form>
       <div class="form-group">
         <div class="input-group mb-3" id="discount-amount-group">
@@ -20,6 +20,7 @@ function renderSelectedDiscountForm() {
             <option value="9">9 or more</option>
             <option value="10">10 or more</option>
           </select>
+          <span>&#9432<span>
         </div>
       </div>
       <div class="form-group" id="discount-date-range-group">
