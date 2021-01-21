@@ -282,7 +282,13 @@ input[type=text]:placeholder {
 }
 
 .form-tooltip{
-  vertical-align: sub;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 50px;
+  color: #525a66;
+  height: 50px;
+  text-align: center;
+  vertical-align: bottom;
 }
 
 .overlay{
