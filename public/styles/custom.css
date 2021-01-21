@@ -281,6 +281,10 @@ input[type=text]:placeholder {
   width: auto;
 }
 
+.form-tooltip{
+  vertical-align: sub;
+}
+
 .overlay{
   position: absolute;
   background: rgba(0,0,0,0.5);
@@ -301,10 +305,10 @@ input[type=text]:placeholder {
 }
 
 .fs-spinner {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .loading {

@@ -20,7 +20,7 @@ function renderSelectedDiscountForm() {
             <option value="9">9 or more</option>
             <option value="10">10 or more</option>
           </select>
-          <span data-toggle="tooltip" data-placement="right" title="TEST TEST TEST">&#9432<span>
+          <span class="form-tooltip"data-toggle="tooltip" data-placement="right" title="TEST TEST TEST">&#9432<span>
         </div>
       </div>
       <div class="form-group" id="discount-date-range-group">

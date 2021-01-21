@@ -100,6 +100,8 @@ function discountSelectedProducts() {
                               $(':checkbox', this).trigger('click');
                             }
                           });
+
+                          $('[data-toggle="tooltip"]').tooltip()
                     });
             }, 3000);
         } else {
