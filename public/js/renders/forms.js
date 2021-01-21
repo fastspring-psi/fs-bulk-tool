@@ -20,7 +20,7 @@ function renderSelectedDiscountForm() {
             <option value="9">9 or more</option>
             <option value="10">10 or more</option>
           </select>
-          <span class="form-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="<h5>Product Discount<br></h5><p>Product discount applies the given percentage to the selected quantity and more. If you would like to apply a given percentage to all products select "1 or more".>&nbsp;&#9432<span>
+          <span class="form-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="<h5>Product Discount<br></h5><p>Product discount applies the given percentage to the selected quantity and more. If you would like to apply a given percentage to all products select &quot;1 or more&quot;.>&nbsp;&#9432<span>
         </div>
       </div>
       <div class="form-group" id="discount-date-range-group">
