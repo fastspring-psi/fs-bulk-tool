@@ -291,6 +291,11 @@ input[type=text]:placeholder {
   vertical-align: bottom;
 }
 
+.tooltip{
+  background-color: #c6cace;
+  color: #000000;
+}
+
 .overlay{
   position: absolute;
   background: rgba(0,0,0,0.5);
