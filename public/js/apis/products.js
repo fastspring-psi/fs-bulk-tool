@@ -52,7 +52,7 @@ function discountSelectedProducts() {
     pricing.dateLimits["end"] = dateEnd;
   }
 
-  if(discountReason){
+  if(discReason){
     pricing.discountReason["en"] = discReason;
   }
   pricing.quantityDiscounts[prodQty] = percent;
