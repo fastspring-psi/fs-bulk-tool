@@ -21,8 +21,8 @@ function discountSelectedProducts() {
     }
   }
 
-  if(!(percent && prodQty && dateStart && dateEnd && discReason)) {
-    alert('Please fill in all discount fields');
+  if(!(percent && prodQty)) {
+    alert('Please fill in percentage and quantity for discount');
     return;
   }
   if(productPaths.length == 0) {
@@ -40,10 +40,25 @@ function discountSelectedProducts() {
     products: []
   };
 
+  if(!dateStart && !dateEnd){
+    pricing.dateLimitsEnabled = false;
+    console.log("There are no dates");
+  } else if(dateStart && dateEnd){
+    pricing.dateLimits["start"] = dateStart;
+    pricing.dateLimits["end"] = dateEnd;
+  } else if(dateStart && !dateEnd){
+    pricing.dateLimits["start"] = dateStart;
+  } else if(!dateStart && dateEnd){
+    pricing.dateLimits["end"] = dateEnd;
+  }
+
+  if(discountReason){
+    pricing.discountReason["en"] = discReason;
+  }
   pricing.quantityDiscounts[prodQty] = percent;
-  pricing.dateLimits["start"] = dateStart;
-  pricing.dateLimits["end"] = dateEnd;
-  pricing.discountReason["en"] = discReason;
+  //pricing.dateLimits["start"] = dateStart;
+  //pricing.dateLimits["end"] = dateEnd;
+  //pricing.discountReason["en"] = discReason;
   for(i = 0; i < productPaths.length; i++) {
     payload.products[i] = {
       product: productPaths[i],
