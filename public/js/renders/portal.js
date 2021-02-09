@@ -24,6 +24,7 @@ function renderProductDiscounts(product) {
 //Display date range in a more readable way
 function renderProductDiscountDateLimits(product) {
   let dateLimits = '';
+  console.log(Object.keys(product.pricing.dateLimits).length);
   if (product.pricing.dateLimits && Object.keys(product.pricing.dateLimits).length > 0) {
     dateLimits = Object.keys(product.pricing.dateLimits).map((key, i) => (
       `<span> ${key} : ${product.pricing.dateLimits[key]}${i+1 < Object.keys(product.pricing.dateLimits).length ? '<br/>' : ''} </span>`
