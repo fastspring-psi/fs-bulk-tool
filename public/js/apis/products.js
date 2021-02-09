@@ -34,7 +34,7 @@ function discountSelectedProducts() {
       quantityDiscounts: {},
       dateLimitsEnabled: true,
       dateLimits: {},
-      discountReason: {""}
+      discountReason: {}
   };
   const payload = {
     products: []
@@ -54,6 +54,8 @@ function discountSelectedProducts() {
 
   if(discReason){
     pricing.discountReason["en"] = discReason;
+  } else {
+    pricing.discountReason["en"] = "";
   }
   pricing.quantityDiscounts[prodQty] = percent;
   //pricing.dateLimits["start"] = dateStart;
