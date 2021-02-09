@@ -34,7 +34,7 @@ function discountSelectedProducts() {
       quantityDiscounts: {},
       dateLimitsEnabled: true,
       dateLimits: {},
-      discountReason: {}
+      discountReason: {""}
   };
   const payload = {
     products: []
