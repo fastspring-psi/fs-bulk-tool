@@ -42,13 +42,14 @@ function discountSelectedProducts() {
 
   if(!dateStart && !dateEnd){
     pricing.dateLimitsEnabled = false;
-    console.log("There are no dates");
   } else if(dateStart && dateEnd){
     pricing.dateLimits["start"] = dateStart;
     pricing.dateLimits["end"] = dateEnd;
   } else if(dateStart && !dateEnd){
     pricing.dateLimits["start"] = dateStart;
+    pricing.dateLimits["end"] = "";
   } else if(!dateStart && dateEnd){
+    pricing.dateLimits["start"] = "";
     pricing.dateLimits["end"] = dateEnd;
   }
 
