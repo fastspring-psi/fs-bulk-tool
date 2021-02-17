@@ -53,7 +53,6 @@ function discountSelectedProducts() {
   }
 
   if(discReason){
-    console.log("")
     pricing.discountReason["en"] = discReason;
   } else {
     pricing.discountReason["en"] = "";
@@ -83,7 +82,7 @@ function discountSelectedProducts() {
           if (resUpdatedProds && resUpdatedProds.success && resUpdatedProds.response.products) {
               // Reload table content
               // Give 2 seconds for changes to reflect in API
-              console.log("Successful API call");
+              console.log(resUpdatedProds.response.products);
               setTimeout(function() {
                   $.post(`${window.location.origin}/getPortalDetails`, { token })
                       .done((resPortal) => {
