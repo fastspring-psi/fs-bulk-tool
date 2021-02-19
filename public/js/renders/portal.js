@@ -71,7 +71,7 @@ function renderProductsTable(products) {
       <div class='col'>
         <table class="table table-hover" id="table-products">
           <thead>
-            <tr class="bg-info">
+            <tr>
               <th scope="col"> Selected </th>
               <th scope="col"> Display Name </th>
               <th scope="col"> Price </th>
