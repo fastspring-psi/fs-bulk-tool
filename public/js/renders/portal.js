@@ -8,6 +8,7 @@ function renderNoProducts() {
   `);
 }
 
+
 function renderProductDiscounts(product) {
   let discounts = '';
   if (product.pricing.quantityDiscounts && Object.keys(product.pricing.quantityDiscounts).length > 0) {
@@ -21,7 +22,7 @@ function renderProductDiscounts(product) {
 }
 
 //TODO:
-//Display date range in a more readable way
+//Add no date limits
 function renderProductDiscountDateLimits(product) {
   let dateLimits = '';
   console.log("THIS IS WHERE THE LENGTH IS");

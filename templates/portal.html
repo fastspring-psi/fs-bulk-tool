@@ -34,7 +34,7 @@
       </button>
     </nav>
 
-<!--TODO handle loading and styling-->
+
     <div class="container-color d-flex w-100 h-100 mx-auto flex-column">
         <main role="main" class="container">
           <h1> Bulk Discount </h1>
@@ -66,11 +66,6 @@
                 .done((resPortal) => {
                     if (resPortal && resPortal.success) {
                         console.log(resPortal.products);
-
-                        //TODO:
-                        //Call intial form not products table
-                        //Only insert jquery for select table row if there are products
-                        //Validate discount form before submit goes through
 
                         const productsElement = resPortal.products.length > 0 ?
                             renderProductsTable(resPortal.products)

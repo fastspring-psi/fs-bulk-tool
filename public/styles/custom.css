@@ -331,3 +331,9 @@ input[type=text]:placeholder {
 .hide {
     display: none;
 }
+
+#table-product thead {
+  background-color: #323a40;
+  color:#ffffff;
+  border-radius: .25rem;
+}

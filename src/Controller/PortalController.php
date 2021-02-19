@@ -57,6 +57,7 @@ class PortalController extends AbstractController
         }
     }
 
+    //TODO add multiple page handling
     public function getPortalDetails(Request $request){
       try {
         // Check credentials from URL
