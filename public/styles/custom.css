@@ -332,7 +332,7 @@ input[type=text]:placeholder {
     display: none;
 }
 
-#table-product thead {
+#table-products thead {
   background-color: #323a40;
   color:#ffffff;
   border-radius: .25rem;
