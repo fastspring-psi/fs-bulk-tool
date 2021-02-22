@@ -340,4 +340,9 @@ input[type=text]:placeholder {
 
 #discount-form-submit {
   background-color: #56baed;
+  border-style: none;
+}
+
+#discount-form-submit:hover {
+  background-color: #39ace7;
 }

@@ -76,8 +76,6 @@ function discountSelectedProducts() {
 
   $('#loading-spinner').show();
 
-  // Perform charge request
-  //TODO add iterated success verification
   $.post(`${window.location.origin}/products`, payload)
       .done((resUpdatedProds) => {
           if (resUpdatedProds && resUpdatedProds.success && resUpdatedProds.response.products) {
