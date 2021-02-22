@@ -93,8 +93,6 @@ function discountSelectedProducts() {
                               ;
                               $('#loading-spinner').hide();
                               $('#products-container').html([productsElement]);
-                              alert('You have successfully discounted your products!');
-
                           }
                           const formElement = renderSelectedDiscountForm();
                           $('#form-container').html(formElement);
@@ -123,6 +121,7 @@ function discountSelectedProducts() {
                           $('[data-toggle="tooltip"]').tooltip()
                     });
             }, 3000);
+            alert('You have successfully discounted your products!');
         } else {
             alert('Could not update products, please make sure products exists');
             const formElement = renderSelectedDiscountForm();
