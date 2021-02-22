@@ -99,6 +99,8 @@ function discountSelectedProducts() {
                           }
                           const formElement = renderSelectedDiscountForm();
                           $('#form-container').html(formElement);
+                          alert('You have successfully discounted your products!');
+                          
                           //used for table row selecting
                           $(document).ready(function(){
                             var date_input=$('input[name="date"]'); //our date input has the name "date"

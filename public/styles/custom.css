@@ -315,6 +315,7 @@ input[type=text]:placeholder {
     top: 50%;
     width: 3rem;
     height: 3rem;
+    z-index: 1000;
 }
 
 .fs-spinner {
@@ -335,5 +336,8 @@ input[type=text]:placeholder {
 #table-products thead {
   background-color: #4e5961;
   color:#ffffff;
-  border-radius: .25rem;
+}
+
+#discount-form-submit {
+  background-color: #56baed;
 }
