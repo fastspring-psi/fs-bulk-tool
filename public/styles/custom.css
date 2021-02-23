@@ -269,9 +269,10 @@ input[type=text]:placeholder {
 
 .req-info {
   display: inline-flex;
+  height: 20px;
 }
 
-p.req-info {
+.req-info p{
   font-size: 10px;
 }
 
@@ -327,6 +328,7 @@ p.remove_button{
   color: #525a66;
   text-align: center;
   vertical-align: bottom;
+  height: 25px;
 }
 
 #discount-date-tooltip{
