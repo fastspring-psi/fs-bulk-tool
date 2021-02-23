@@ -3,24 +3,28 @@
 function renderSelectedDiscountForm() {
   return(`
     <form>
-      <div class="form-group">
-        <div class="input-group mb-3" id="discount-amount-group">
-          <input class="form-control" id="pcntOff" placeholder="20" type="text" >
-          <span class="input-group-text">% for </span>
-          <select class="form-select" id="prodQty">
-            <option selected>Choose...</option>
-            <option value="1">1 or more </option>
-            <option value="2">2 or more</option>
-            <option value="3">3 or more</option>
-            <option value="4">4 or more</option>
-            <option value="5">5 or more</option>
-            <option value="6">6 or more</option>
-            <option value="7">7 or more</option>
-            <option value="8">8 or more</option>
-            <option value="9">9 or more</option>
-            <option value="10">10 or more</option>
-          </select>
-          <span class="form-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="<h6>Product Discount<br></h6><p>Product discount applies the given percentage to the selected quantity and more. If you would like to apply a given percentage to all products select &quot;1 or more&quot;.</p?">&nbsp;&#9432<span>
+      <div class="form-group" id="discount-amount-group">
+        <div class="input-group mb-3">
+            <input class="form-control" id="pcntOff0" placeholder="20" type="text" >
+            <span class="input-group-text">% for </span>
+            <select class="form-select" id="prodQty0">
+              <option selected>Choose...</option>
+              <option value="1">1 or more </option>
+              <option value="2">2 or more</option>
+              <option value="3">3 or more</option>
+              <option value="4">4 or more</option>
+              <option value="5">5 or more</option>
+              <option value="6">6 or more</option>
+              <option value="7">7 or more</option>
+              <option value="8">8 or more</option>
+              <option value="9">9 or more</option>
+              <option value="10">10 or more</option>
+            </select>
+            <p class="add_button">+</p>
+        </div>
+         <div>
+              <span class="form-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="<h6>Product Discount<br></h6><p>Product discount applies the given percentage to the selected quantity and more. If you would like to apply a given percentage to all products select &quot;1 or more&quot;.</p?">&nbsp;&#9432<span>
+                <p>* Discount amount and quantity are required</p>
         </div>
       </div>
       <div class="form-group" id="discount-date-range-group">
