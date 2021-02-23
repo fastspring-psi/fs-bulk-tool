@@ -299,12 +299,16 @@ input[type=text]:placeholder {
   background-color: #39ace7;
 }
 
-p.add_button {
-  font-size: 10px;
+i.add_button {
+  font-size: 50px;
+  position: relative;
+  line-height: 0px;
 }
 
-p.remove_button{
-  font-size: 10px;
+i.remove_button{
+  font-size: 50px;
+  position: relative;
+  line-height: 0px;
 }
 
 .form-tooltip{

@@ -20,7 +20,7 @@ function renderSelectedDiscountForm() {
               <option value="9">9 or more</option>
               <option value="10">10 or more</option>
             </select>
-            <i class="add_button" data-icon="&oplus;"></i>
+            <i class="add_button">&oplus;</i>
         </div>
          <div class="req-info">
               <span class="form-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="<h6>Product Discount<br></h6><p>Product discount applies the given percentage to the selected quantity and more. If you would like to apply a given percentage to all products select &quot;1 or more&quot;.</p?">&nbsp;&#9432<span>
