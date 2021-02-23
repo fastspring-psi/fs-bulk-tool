@@ -142,7 +142,6 @@ function discountSelectedProducts() {
                             //Once add button is clicked
                             $(addButton).click(function(){
                                 //Check maximum number of input fields
-                                  console.log(x);
                                     const fieldHTML = `
                                     <div class="input-group mb-3">
                                       <input class="form-control" id="pcntOff${x}" placeholder="20" type="text" >

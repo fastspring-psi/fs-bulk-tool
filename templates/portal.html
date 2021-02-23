@@ -49,6 +49,7 @@
                 <span class="sr-only">Loading...</span>
               </div>
               <h3> Select products to discount <br></h3>
+              <button>Select All</button>
               <div id='products-container'>
                 <!-- Content will be populated here -->
               </div>
@@ -99,7 +100,6 @@
                           //Once add button is clicked
                           $(addButton).click(function(){
                               //Check maximum number of input fields
-                                console.log(x);
                                   const fieldHTML = `
                                   <div class="input-group mb-3">
                                     <input class="form-control" id="pcntOff${x}" placeholder="20" type="text" >
