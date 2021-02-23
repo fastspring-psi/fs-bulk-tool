@@ -299,11 +299,11 @@ input[type=text]:placeholder {
   background-color: #39ace7;
 }
 
-#add_button {
+p.add_button {
   font-size: 10px;
 }
 
-#remove_button{
+p.remove_button{
   font-size: 10px;
 }
 
