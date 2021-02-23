@@ -319,6 +319,7 @@ p.add_button {
 
 .add_button:hover {
   color: #525a66;
+  cursor: pointer;
 }
 
 p.remove_button{
@@ -330,6 +331,7 @@ p.remove_button{
 
 .remove_button:hover {
   color: #525a66;
+  cursor: pointer;
 }
 
 #discount-amount-tooltip{
@@ -341,6 +343,10 @@ p.remove_button{
   height: 25px;
 }
 
+#discount-amount-tooltip:hover {
+  cursor: default;
+}
+
 #discount-date-tooltip{
   display: inline-block;
   font-size: 18px;
@@ -349,6 +355,10 @@ p.remove_button{
   height: 50px;
   text-align: center;
   vertical-align: bottom;
+}
+
+#discount-date-tooltip:hover{
+  cursor: default;
 }
 
 .tooltip-inner{
