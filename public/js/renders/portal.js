@@ -95,5 +95,5 @@ function selectAllProducts() {
   for(i = 0; i < checkBoxes.length; i++){
     checkBoxes[i].checked = source.checked;
   }
-  return();
+  return;
 }
