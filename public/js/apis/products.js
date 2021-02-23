@@ -10,8 +10,8 @@ function discountSelectedProducts() {
   var qty = [];
   //var match = true;
 
-  //const percent = document.getElementById("pcntOff").value;
-  //const prodQty = document.getElementById("prodQty").value;
+  const percent = document.getElementById("pcntOff0").value;
+  const prodQty = document.getElementById("prodQty0").value;
   const dateStart = document.getElementById("dateStart").value;
   const dateEnd = document.getElementById("dateEnd").value;
   const discReason = document.getElementById("discReason").value;
