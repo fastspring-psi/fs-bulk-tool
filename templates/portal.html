@@ -142,13 +142,9 @@
 
                         $('[data-toggle="tooltip"]').tooltip()
 
-                        $('#product-selectall').click(function(event){
-                          console.log("ITS HERE AND IT WAS CALLED");
-                          const productsTable = document.getElementById("table-products");
-                          const checkBoxes = productsTable.getElementsByTagName("INPUT");
-                          for(i = 0; i < checkBoxes.length; i++){
-                            checkBoxes[i].checked = source.checked;
-                          }
+                        $("#products-selectall").change(function(){  //"select all" change
+                          console.log("HERE"); 
+                            $(".checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
                         });
                     } else {
                         forceLogout(resPortal.error);
