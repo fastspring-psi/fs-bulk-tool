@@ -267,9 +267,13 @@ input[type=text]:placeholder {
   padding: 35px;
 }
 
-#discount-amount-group {
+.req-info {
   display: inline-flex;
-  width: 30%;
+}
+
+#discount-amount-group {
+  display: block;
+  width: 35%;
 }
 
 #discount-date-range-group {
@@ -279,6 +283,20 @@ input[type=text]:placeholder {
 
 #discount-date-range-group .form-control {
   width: auto;
+}
+
+#table-products thead {
+  background-color: #4e5961;
+  color:#ffffff;
+}
+
+#discount-form-submit {
+  background-color: #56baed;
+  border-style: none;
+}
+
+#discount-form-submit:hover {
+  background-color: #39ace7;
 }
 
 .form-tooltip{
@@ -331,18 +349,4 @@ input[type=text]:placeholder {
 
 .hide {
     display: none;
-}
-
-#table-products thead {
-  background-color: #4e5961;
-  color:#ffffff;
-}
-
-#discount-form-submit {
-  background-color: #56baed;
-  border-style: none;
-}
-
-#discount-form-submit:hover {
-  background-color: #39ace7;
 }
