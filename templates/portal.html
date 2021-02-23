@@ -144,7 +144,7 @@
 
                         $("#product-selectall").click(function(){  //"select all" change
                           console.log("HERE");
-                          $(".checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
+                          $(":checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
                         });
                     } else {
                         forceLogout(resPortal.error);
