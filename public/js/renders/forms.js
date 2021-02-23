@@ -24,7 +24,7 @@ function renderSelectedDiscountForm() {
         </div>
          <div class="req-info">
               <span class="form-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="<h6>Product Discount<br></h6><p>Product discount applies the given percentage to the selected quantity and more. If you would like to apply a given percentage to all products select &quot;1 or more&quot;.</p?">&nbsp;&#9432<span>
-                <p>* Discount amount and quantity are required</p>
+              <p>* Discount amount and quantity are required</p>
         </div>
       </div>
       <div class="form-group" id="discount-date-range-group">
