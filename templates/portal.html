@@ -142,7 +142,7 @@
 
                         $('[data-toggle="tooltip"]').tooltip()
 
-                        $("#product-selectall").change(function(){  //"select all" change
+                        $("#product-selectall").click(function(){  //"select all" change
                           console.log("HERE");
                           $(".checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
                         });
