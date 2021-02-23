@@ -49,7 +49,7 @@
                 <span class="sr-only">Loading...</span>
               </div>
               <h3> Select products to discount <br></h3>
-              <button class="btn btn-primary" id="product-selectall" name="select_all" type="button" onclick="return selectAllProducts()">Select All</button>
+              <button class="btn btn-primary" id="product-selectall" name="select_all" type="button">Select All</button>
               <div id='products-container'>
                 <!-- Content will be populated here -->
               </div>
@@ -142,6 +142,13 @@
 
                         $('[data-toggle="tooltip"]').tooltip()
 
+                        $('#product-selectall').on('click', '#product-selectall', function(event){
+                          const productsTable = document.getElementById("table-products");
+                          const checkBoxes = productsTable.getElementsByTagName("INPUT");
+                          for(i = 0; i < checkBoxes.length; i++){
+                            checkBoxes[i].checked = source.checked;
+                          }
+                        });
                     } else {
                         forceLogout(resPortal.error);
                     }
