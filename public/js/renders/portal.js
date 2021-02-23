@@ -88,3 +88,11 @@ function renderProductsTable(products) {
       </div>
     `);
 }
+
+function selectAllProducts() {
+  const productsTable = document.getElementById("table-products");
+  const checkBoxes = productsTable.getElementsByTagName("INPUT");
+  for(i = 0; i < checkBoxes.length; i++){
+    checkBoxes[i].checked = source.checked;
+  }
+}
