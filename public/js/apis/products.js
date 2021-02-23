@@ -160,7 +160,7 @@ function discountSelectedProducts() {
                                             <option value="9">9 or more</option>
                                             <option value="10">10 or more</option>
                                           </select>
-                                          <p class="remove_button">&#8854;</p>
+                                          <i class="remove_button" data-icon="&#8854;"></i>
                                         </div>`;
                                 if(x < maxField){
                                     x++; //Increment field counter
