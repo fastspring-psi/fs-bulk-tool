@@ -310,6 +310,15 @@ input[type=text]:placeholder {
   background-color: #39ace7;
 }
 
+#product-selectall{
+  width:50%;
+  background-color: #56baed;
+  border-style: none;
+}
+
+#product-selectall:hover{
+  background-color: #39ace7;
+}
 p.add_button {
   font-size: 30px;
   position: relative;
