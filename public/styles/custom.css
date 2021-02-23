@@ -313,7 +313,15 @@ p.remove_button{
   height: 0px;
 }
 
-.form-tooltip{
+#discount-amount-tooltip{
+  display: inline-block;
+  font-size: 18px;
+  color: #525a66;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#discount-date-tooltip{
   display: inline-block;
   font-size: 18px;
   line-height: 50px;
@@ -321,6 +329,10 @@ p.remove_button{
   height: 50px;
   text-align: center;
   vertical-align: bottom;
+}
+
+.form-tooltip{
+
 }
 
 .form-tooltip p {
