@@ -339,7 +339,7 @@ p.remove_button{
 }
 
 .remove_button:hover {
-  color: #525a66;
+  color: #eb4747;
   cursor: pointer;
 }
 
