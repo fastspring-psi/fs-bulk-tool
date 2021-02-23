@@ -299,6 +299,14 @@ input[type=text]:placeholder {
   background-color: #39ace7;
 }
 
+#add_button {
+  font-size: 10px;
+}
+
+#remove_button{
+  font-size: 10px;
+}
+
 .form-tooltip{
   display: inline-block;
   font-size: 18px;
@@ -307,6 +315,10 @@ input[type=text]:placeholder {
   height: 50px;
   text-align: center;
   vertical-align: bottom;
+}
+
+.form-tooltip p {
+  font-size: 10px;
 }
 
 .tooltip-inner{
