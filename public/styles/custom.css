@@ -273,7 +273,9 @@ input[type=text]:placeholder {
 }
 
 .req-info p{
-  font-size: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+  color: #525a66;
 }
 
 #discount-amount-group {
@@ -315,11 +317,19 @@ p.add_button {
   height: 0px;
 }
 
+.add_button:hover {
+  color: #525a66;
+}
+
 p.remove_button{
   font-size: 30px;
   position: relative;
   line-height: 40px;
   height: 0px;
+}
+
+.remove_button:hover {
+  color: #525a66;
 }
 
 #discount-amount-tooltip{
