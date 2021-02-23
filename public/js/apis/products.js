@@ -10,8 +10,8 @@ function discountSelectedProducts() {
   var qty = [];
   //var match = true;
 
-  const percent = document.getElementById("pcntOff0").value;
-  const prodQty = document.getElementById("prodQty0").value;
+  const req_percent = document.getElementById("pcntOff0").value;
+  const req_prodQty = document.getElementById("prodQty0").value;
   const dateStart = document.getElementById("dateStart").value;
   const dateEnd = document.getElementById("dateEnd").value;
   const discReason = document.getElementById("discReason").value;
@@ -26,7 +26,7 @@ function discountSelectedProducts() {
     }
   }
 
-  if(!(percent && prodQty!="Choose...")) {
+  if(!(req_percent && req_prodQty!="Choose...")) {
     alert('Please fill in percentage and quantity for discount');
     return;
   }
