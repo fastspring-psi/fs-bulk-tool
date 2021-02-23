@@ -82,7 +82,7 @@ function discountSelectedProducts() {
   }
 
   for(i = 0; i < percent.length; i++){
-    pricing.quantityDiscounts[qty] = percent;
+    pricing.quantityDiscounts[qty[i]] = percent[i];
   }
 
   for(i = 0; i < productPaths.length; i++) {
