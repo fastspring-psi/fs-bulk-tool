@@ -142,7 +142,7 @@
 
                         $('[data-toggle="tooltip"]').tooltip()
 
-                        $('#product-selectall').on('click', '#product-selectall', function(event){
+                        $('#product-selectall').click(function(event){
                           console.log("ITS HERE AND IT WAS CALLED");
                           const productsTable = document.getElementById("table-products");
                           const checkBoxes = productsTable.getElementsByTagName("INPUT");
