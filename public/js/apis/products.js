@@ -183,6 +183,16 @@ function discountSelectedProducts() {
                           });
 
                           $('[data-toggle="tooltip"]').tooltip()
+
+                          $("#product-selectall").click(function(){  //"select all" change
+                            console.log("HERE");
+                            if ($(this).hasClass('allChecked')) {
+                                $('input[type="checkbox"]', '#table-products').prop('checked', false);
+                            } else {
+                                $('input[type="checkbox"]', '#table-products').prop('checked', true);
+                            }
+                            $(this).toggleClass('allChecked');
+                          });
                     });
             }, 3000);
             alert('You have successfully discounted your products!');
