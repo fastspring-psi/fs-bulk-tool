@@ -33,7 +33,7 @@ function renderProductDiscountDateLimits(product) {
   //WORK HERE ON NO DATE LIMIT IF ""
   if (product.pricing.dateLimits && Object.keys(product.pricing.dateLimits).length > 0) {
     dateLimits = Object.keys(product.pricing.dateLimits).map((key, i) => (
-      `<span> ${key} : ${product.pricing.dateLimits[key]}${i+1 < Object.keys(product.pricing.dateLimits).length ? '<br/>' : ''} </span>`
+      `<span> <b>${key} :</b> ${product.pricing.dateLimits[key]}${i+1 < Object.keys(product.pricing.dateLimits).length ? '<br/>' : ''} </span>`
     )).join('');
   } else {
     dateLimits = "No date limits";
