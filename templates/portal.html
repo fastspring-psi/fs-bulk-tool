@@ -144,7 +144,12 @@
 
                         $("#product-selectall").click(function(){  //"select all" change
                           console.log("HERE");
-                          $(":checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
+                          if ($(this).hasClass('allChecked')) {
+                              $('input[type="checkbox"]', '#example').prop('checked', false);
+                          } else {
+                              $('input[type="checkbox"]', '#example').prop('checked', true);
+                          }
+                          $(this).toggleClass('allChecked');
                         });
                     } else {
                         forceLogout(resPortal.error);
