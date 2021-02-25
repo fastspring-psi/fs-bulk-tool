@@ -314,10 +314,13 @@ input[type=text]:placeholder {
   width:20%;
   background-color: #56baed;
   border-style: none;
+  border-color: none;
 }
 
 #product-selectall:hover{
   background-color: #39ace7;
+  border-style: none;
+  border-color: none;
 }
 p.add_button {
   font-size: 30px;
