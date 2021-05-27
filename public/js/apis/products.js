@@ -1,7 +1,5 @@
 //TODO
 //Make submit function independent of page ie accept arguments
-//If no date change payload
-//If no disc reason
 
 //This function works with the forms.js render
 function discountSelectedProducts() {
